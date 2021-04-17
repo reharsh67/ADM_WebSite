@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MyTestWebPage.Student {
+namespace ADM_WebSite.Student {
     
     
     public partial class StudentARFPastEdu {

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="StudDash.aspx.cs" Inherits="MyTestWebPage.Student.StudDash" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="StudDash.aspx.cs" Inherits="ADM_WebSite.Student.StudDash" %>
 
 
 <!DOCTYPE html>

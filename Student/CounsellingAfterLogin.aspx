@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CounsellingAfterLogin.aspx.cs" Inherits="MyTestWebPage.Student.CounsellingAfterLogin" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CounsellingAfterLogin.aspx.cs" Inherits="ADM_WebSite.Student.CounsellingAfterLogin" %>
 
 <!DOCTYPE html>
 <!DOCTYPE html>

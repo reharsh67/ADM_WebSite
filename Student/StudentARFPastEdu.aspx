@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="StudentARFPastEdu.aspx.cs" Inherits="MyTestWebPage.Student.StudentARFPastEdu" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="StudentARFPastEdu.aspx.cs" Inherits="ADM_WebSite.Student.StudentARFPastEdu" %>
 <!DOCTYPE html>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ViewQueryResp.aspx.cs" Inherits="MyTestWebPage.Student.ViewQueryResp" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ViewQueryResp.aspx.cs" Inherits="ADM_WebSite.Student.ViewQueryResp" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">

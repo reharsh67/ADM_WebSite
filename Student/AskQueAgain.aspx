@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AskQueAgain.aspx.cs" Inherits="MyTestWebPage.Student.AskQueAgain" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AskQueAgain.aspx.cs" Inherits="ADM_WebSite.Student.AskQueAgain" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">

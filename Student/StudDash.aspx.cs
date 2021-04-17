@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace MyTestWebPage.Student
+namespace ADM_WebSite.Student
 {
     public partial class StudDash : System.Web.UI.Page
     {

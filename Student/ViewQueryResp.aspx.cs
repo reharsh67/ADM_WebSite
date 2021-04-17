@@ -4,10 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using MyTestWebPage.MyWebService;
+using ADM_WebSite.MyWebService;
 using System.Data;
 
-namespace MyTestWebPage.Student
+namespace ADM_WebSite.Student
 {
     public partial class ViewQueryResp : System.Web.UI.Page
     {

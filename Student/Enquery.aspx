@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Enquery.aspx.cs" Inherits="MyTestWebPage.Student.Enquery" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Enquery.aspx.cs" Inherits="ADM_WebSite.Student.Enquery" %>
 
 <!DOCTYPE html>
 <!DOCTYPE html>

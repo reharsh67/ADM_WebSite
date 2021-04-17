@@ -4,8 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using MyTestWebPage.MyWebService;
-namespace MyTestWebPage.Student
+using ADM_WebSite.MyWebService;
+namespace ADM_WebSite.Student
 {
     public partial class ResetPassword : System.Web.UI.Page
     {

@@ -8,9 +8,9 @@ using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using MyTestWebPage.MyWebService;
+using ADM_WebSite.MyWebService;
 
-namespace MyTestWebPage.Student
+namespace ADM_WebSite.Student
 {
     public partial class GenratePassword : System.Web.UI.Page
     {

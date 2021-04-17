@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GenratePassword.aspx.cs" Inherits="MyTestWebPage.Student.GenratePassword" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GenratePassword.aspx.cs" Inherits="ADM_WebSite.Student.GenratePassword" %>
 
 <!DOCTYPE html>
 

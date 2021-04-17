@@ -1,4 +1,4 @@
-﻿using MyTestWebPage.MyWebService;
+﻿using ADM_WebSite.MyWebService;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace MyTestWebPage.Student
+namespace ADM_WebSite.Student
 {
     public partial class StudLogin : System.Web.UI.Page
     {
