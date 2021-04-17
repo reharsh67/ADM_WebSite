@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Fill_Form">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ef" type="tns:EnqueryFields" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="EnqueryFields">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="AppID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Uid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Phno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Query" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Fill_FormResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Fill_FormResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Fill_Coun_Form">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ef" type="tns:CounsellingFields" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CounsellingFields">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="AppId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Year" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Date" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Slot" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Fill_Coun_FormResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Fill_Coun_FormResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Stud_Login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ef" type="tns:StudLoginFields" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="StudLoginFields">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Pass" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OldPass" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConfirmPass" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AppID" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Stud_LoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Stud_LoginResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Genrate_Pass">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ef" type="tns:StudLoginFields" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Genrate_PassResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Genrate_PassResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ask_Again_Que">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ef" type="tns:EnqueryFields" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ask_Again_QueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Ask_Again_QueResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Load_Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ef" type="tns:EnqueryFields" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Load_ResponseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Load_ResponseResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Pre_Fill_ARF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ef" type="tns:ARFFormFields" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ARFFormFields">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Uid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Phno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Stream" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AppID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DOB" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Gender" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FaName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MoName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FaWork" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MoWork" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FaPhno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MoPhno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Income" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cast" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Religion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AddLine1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AddLine2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AddLine3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdmissionType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AcademicYear" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdmissionIn" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Pre_Fill_ARFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Pre_Fill_ARFResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ARF_Fill">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ef" type="tns:ARFFormFields" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ARF_FillResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ARF_FillResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PastEdu_Details">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ef" type="tns:PastEduFields" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PastEduFields">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="AppID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="HsscBoard" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HsscGrade" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="HsscPhy" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="HsscChem" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="HsscMaths" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="HsscPcmTot" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="HsscTotMarksObt" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="HsscTotMarks" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="HsscPcmPer" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="HsscOverallPer" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="SscTotObt" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SscBoard" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SscOverallPer" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="DipTotObt" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DipBoard" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DipOverallPer" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="JeeScore" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="JeeRoll" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CetScore" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CetRoll" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="PastEdu_DetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PastEdu_DetailsResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Gen_Appid">
+        <s:complexType />
+      </s:element>
+      <s:element name="Gen_AppidResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Gen_AppidResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Pass_Reset">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ef" type="tns:StudLoginFields" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Pass_ResetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Pass_ResetResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="Fill_FormSoapIn">
+    <wsdl:part name="parameters" element="tns:Fill_Form" />
+  </wsdl:message>
+  <wsdl:message name="Fill_FormSoapOut">
+    <wsdl:part name="parameters" element="tns:Fill_FormResponse" />
+  </wsdl:message>
+  <wsdl:message name="Fill_Coun_FormSoapIn">
+    <wsdl:part name="parameters" element="tns:Fill_Coun_Form" />
+  </wsdl:message>
+  <wsdl:message name="Fill_Coun_FormSoapOut">
+    <wsdl:part name="parameters" element="tns:Fill_Coun_FormResponse" />
+  </wsdl:message>
+  <wsdl:message name="Stud_LoginSoapIn">
+    <wsdl:part name="parameters" element="tns:Stud_Login" />
+  </wsdl:message>
+  <wsdl:message name="Stud_LoginSoapOut">
+    <wsdl:part name="parameters" element="tns:Stud_LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="Genrate_PassSoapIn">
+    <wsdl:part name="parameters" element="tns:Genrate_Pass" />
+  </wsdl:message>
+  <wsdl:message name="Genrate_PassSoapOut">
+    <wsdl:part name="parameters" element="tns:Genrate_PassResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ask_Again_QueSoapIn">
+    <wsdl:part name="parameters" element="tns:Ask_Again_Que" />
+  </wsdl:message>
+  <wsdl:message name="Ask_Again_QueSoapOut">
+    <wsdl:part name="parameters" element="tns:Ask_Again_QueResponse" />
+  </wsdl:message>
+  <wsdl:message name="Load_ResponseSoapIn">
+    <wsdl:part name="parameters" element="tns:Load_Response" />
+  </wsdl:message>
+  <wsdl:message name="Load_ResponseSoapOut">
+    <wsdl:part name="parameters" element="tns:Load_ResponseResponse" />
+  </wsdl:message>
+  <wsdl:message name="Pre_Fill_ARFSoapIn">
+    <wsdl:part name="parameters" element="tns:Pre_Fill_ARF" />
+  </wsdl:message>
+  <wsdl:message name="Pre_Fill_ARFSoapOut">
+    <wsdl:part name="parameters" element="tns:Pre_Fill_ARFResponse" />
+  </wsdl:message>
+  <wsdl:message name="ARF_FillSoapIn">
+    <wsdl:part name="parameters" element="tns:ARF_Fill" />
+  </wsdl:message>
+  <wsdl:message name="ARF_FillSoapOut">
+    <wsdl:part name="parameters" element="tns:ARF_FillResponse" />
+  </wsdl:message>
+  <wsdl:message name="PastEdu_DetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:PastEdu_Details" />
+  </wsdl:message>
+  <wsdl:message name="PastEdu_DetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:PastEdu_DetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Gen_AppidSoapIn">
+    <wsdl:part name="parameters" element="tns:Gen_Appid" />
+  </wsdl:message>
+  <wsdl:message name="Gen_AppidSoapOut">
+    <wsdl:part name="parameters" element="tns:Gen_AppidResponse" />
+  </wsdl:message>
+  <wsdl:message name="Pass_ResetSoapIn">
+    <wsdl:part name="parameters" element="tns:Pass_Reset" />
+  </wsdl:message>
+  <wsdl:message name="Pass_ResetSoapOut">
+    <wsdl:part name="parameters" element="tns:Pass_ResetResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Fill_Form">
+      <wsdl:input message="tns:Fill_FormSoapIn" />
+      <wsdl:output message="tns:Fill_FormSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Fill_Coun_Form">
+      <wsdl:input message="tns:Fill_Coun_FormSoapIn" />
+      <wsdl:output message="tns:Fill_Coun_FormSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Stud_Login">
+      <wsdl:input message="tns:Stud_LoginSoapIn" />
+      <wsdl:output message="tns:Stud_LoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Genrate_Pass">
+      <wsdl:input message="tns:Genrate_PassSoapIn" />
+      <wsdl:output message="tns:Genrate_PassSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ask_Again_Que">
+      <wsdl:input message="tns:Ask_Again_QueSoapIn" />
+      <wsdl:output message="tns:Ask_Again_QueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Load_Response">
+      <wsdl:input message="tns:Load_ResponseSoapIn" />
+      <wsdl:output message="tns:Load_ResponseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Pre_Fill_ARF">
+      <wsdl:input message="tns:Pre_Fill_ARFSoapIn" />
+      <wsdl:output message="tns:Pre_Fill_ARFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ARF_Fill">
+      <wsdl:input message="tns:ARF_FillSoapIn" />
+      <wsdl:output message="tns:ARF_FillSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PastEdu_Details">
+      <wsdl:input message="tns:PastEdu_DetailsSoapIn" />
+      <wsdl:output message="tns:PastEdu_DetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Gen_Appid">
+      <wsdl:input message="tns:Gen_AppidSoapIn" />
+      <wsdl:output message="tns:Gen_AppidSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Pass_Reset">
+      <wsdl:input message="tns:Pass_ResetSoapIn" />
+      <wsdl:output message="tns:Pass_ResetSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fill_Form">
+      <soap:operation soapAction="http://tempuri.org/Fill_Form" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fill_Coun_Form">
+      <soap:operation soapAction="http://tempuri.org/Fill_Coun_Form" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Stud_Login">
+      <soap:operation soapAction="http://tempuri.org/Stud_Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Genrate_Pass">
+      <soap:operation soapAction="http://tempuri.org/Genrate_Pass" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ask_Again_Que">
+      <soap:operation soapAction="http://tempuri.org/Ask_Again_Que" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Load_Response">
+      <soap:operation soapAction="http://tempuri.org/Load_Response" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Pre_Fill_ARF">
+      <soap:operation soapAction="http://tempuri.org/Pre_Fill_ARF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ARF_Fill">
+      <soap:operation soapAction="http://tempuri.org/ARF_Fill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PastEdu_Details">
+      <soap:operation soapAction="http://tempuri.org/PastEdu_Details" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Gen_Appid">
+      <soap:operation soapAction="http://tempuri.org/Gen_Appid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Pass_Reset">
+      <soap:operation soapAction="http://tempuri.org/Pass_Reset" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fill_Form">
+      <soap12:operation soapAction="http://tempuri.org/Fill_Form" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fill_Coun_Form">
+      <soap12:operation soapAction="http://tempuri.org/Fill_Coun_Form" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Stud_Login">
+      <soap12:operation soapAction="http://tempuri.org/Stud_Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Genrate_Pass">
+      <soap12:operation soapAction="http://tempuri.org/Genrate_Pass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ask_Again_Que">
+      <soap12:operation soapAction="http://tempuri.org/Ask_Again_Que" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Load_Response">
+      <soap12:operation soapAction="http://tempuri.org/Load_Response" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Pre_Fill_ARF">
+      <soap12:operation soapAction="http://tempuri.org/Pre_Fill_ARF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ARF_Fill">
+      <soap12:operation soapAction="http://tempuri.org/ARF_Fill" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PastEdu_Details">
+      <soap12:operation soapAction="http://tempuri.org/PastEdu_Details" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Gen_Appid">
+      <soap12:operation soapAction="http://tempuri.org/Gen_Appid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Pass_Reset">
+      <soap12:operation soapAction="http://tempuri.org/Pass_Reset" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://localhost:58227/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://localhost:58227/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

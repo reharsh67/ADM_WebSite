@@ -54,18 +54,152 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Student\AskQueAgain.aspx" />
+    <Content Include="Student\Counselling.aspx" />
+    <Content Include="Student\CounsellingAfterLogin.aspx" />
+    <Content Include="Student\Enquery.aspx" />
+    <Content Include="Student\Error.aspx" />
+    <Content Include="Student\GenratePassword.aspx" />
+    <Content Include="Student\ResetPassword.aspx" />
+    <Content Include="Student\StudDash.aspx" />
+    <Content Include="Student\StudentARF.aspx" />
+    <Content Include="Student\StudentARFPastEdu.aspx" />
+    <Content Include="Student\StudLogin.aspx" />
+    <Content Include="Student\ViewQueryResp.aspx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Web References\MyWebService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\MyWebService\Service.disco" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Student\AskQueAgain.aspx.cs">
+      <DependentUpon>AskQueAgain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\AskQueAgain.aspx.designer.cs">
+      <DependentUpon>AskQueAgain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Counselling.aspx.cs">
+      <DependentUpon>Counselling.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\Counselling.aspx.designer.cs">
+      <DependentUpon>Counselling.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\CounsellingAfterLogin.aspx.cs">
+      <DependentUpon>CounsellingAfterLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\CounsellingAfterLogin.aspx.designer.cs">
+      <DependentUpon>CounsellingAfterLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Enquery.aspx.cs">
+      <DependentUpon>Enquery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\Enquery.aspx.designer.cs">
+      <DependentUpon>Enquery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\GenratePassword.aspx.cs">
+      <DependentUpon>GenratePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\GenratePassword.aspx.designer.cs">
+      <DependentUpon>GenratePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\StudDash.aspx.cs">
+      <DependentUpon>StudDash.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\StudDash.aspx.designer.cs">
+      <DependentUpon>StudDash.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\StudentARF.aspx.cs">
+      <DependentUpon>StudentARF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\StudentARF.aspx.designer.cs">
+      <DependentUpon>StudentARF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\StudentARFPastEdu.aspx.cs">
+      <DependentUpon>StudentARFPastEdu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\StudentARFPastEdu.aspx.designer.cs">
+      <DependentUpon>StudentARFPastEdu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\StudLogin.aspx.cs">
+      <DependentUpon>StudLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\StudLogin.aspx.designer.cs">
+      <DependentUpon>StudLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\ViewQueryResp.aspx.cs">
+      <DependentUpon>ViewQueryResp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\ViewQueryResp.aspx.designer.cs">
+      <DependentUpon>ViewQueryResp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\MyWebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Web References\MyWebService\Service.wsdl" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:58227/Service.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MyWebService\</RelPath>
+      <UpdateFromURL>http://localhost:58227/Service.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ADM_WebSite_MyWebService_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
