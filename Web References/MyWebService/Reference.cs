@@ -54,6 +54,8 @@ namespace ADM_WebSite.MyWebService {
         
         private System.Threading.SendOrPostCallback Pass_ResetOperationCompleted;
         
+        private System.Threading.SendOrPostCallback Clerk_LoginOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -127,6 +129,9 @@ namespace ADM_WebSite.MyWebService {
         
         /// <remarks/>
         public event Pass_ResetCompletedEventHandler Pass_ResetCompleted;
+        
+        /// <remarks/>
+        public event Clerk_LoginCompletedEventHandler Clerk_LoginCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/HelloWorld", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -473,6 +478,35 @@ namespace ADM_WebSite.MyWebService {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/Clerk_Login", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int Clerk_Login(ClearkLoginFields ef) {
+            object[] results = this.Invoke("Clerk_Login", new object[] {
+                        ef});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void Clerk_LoginAsync(ClearkLoginFields ef) {
+            this.Clerk_LoginAsync(ef, null);
+        }
+        
+        /// <remarks/>
+        public void Clerk_LoginAsync(ClearkLoginFields ef, object userState) {
+            if ((this.Clerk_LoginOperationCompleted == null)) {
+                this.Clerk_LoginOperationCompleted = new System.Threading.SendOrPostCallback(this.OnClerk_LoginOperationCompleted);
+            }
+            this.InvokeAsync("Clerk_Login", new object[] {
+                        ef}, this.Clerk_LoginOperationCompleted, userState);
+        }
+        
+        private void OnClerk_LoginOperationCompleted(object arg) {
+            if ((this.Clerk_LoginCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Clerk_LoginCompleted(this, new Clerk_LoginCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -616,6 +650,75 @@ namespace ADM_WebSite.MyWebService {
             }
             set {
                 this.queryField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class ClearkLoginFields {
+        
+        private string emailField;
+        
+        private string passField;
+        
+        private string oldPassField;
+        
+        private string confirmPassField;
+        
+        private int clerkIDField;
+        
+        /// <remarks/>
+        public string Email {
+            get {
+                return this.emailField;
+            }
+            set {
+                this.emailField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Pass {
+            get {
+                return this.passField;
+            }
+            set {
+                this.passField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string OldPass {
+            get {
+                return this.oldPassField;
+            }
+            set {
+                this.oldPassField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string ConfirmPass {
+            get {
+                return this.confirmPassField;
+            }
+            set {
+                this.confirmPassField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int ClerkID {
+            get {
+                return this.clerkIDField;
+            }
+            set {
+                this.clerkIDField = value;
             }
         }
     }
@@ -1663,6 +1766,32 @@ namespace ADM_WebSite.MyWebService {
         private object[] results;
         
         internal Pass_ResetCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Clerk_LoginCompletedEventHandler(object sender, Clerk_LoginCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class Clerk_LoginCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal Clerk_LoginCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
