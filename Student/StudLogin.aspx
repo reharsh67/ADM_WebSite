@@ -73,7 +73,7 @@
 
                     
                    <li class="right-div">
-               <a href="/Student/StudLogin.aspx" class=" btn--radius-2 "><span class="color:white;">LOGOUT</span></a>
+   
             </li>
 
 
@@ -163,8 +163,7 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <label>Password</label>
-                                    <asp:TextBox ID="pass" class="input--style-4" DataValueField="password" type="password" Width="560px" required runat="server"></asp:TextBox>
-                                    
+                                    <asp:TextBox ID="pass" class="input--style-4" DataValueField="password" TextMode="Password" Width="560px" required runat="server"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-2">

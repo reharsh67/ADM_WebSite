@@ -42,7 +42,19 @@ namespace ADM_WebSite.Student
                 ob.HsscPcmTot = Int32.Parse(HpcmTot.Text);
                 ob.HsscPcmPer = float.Parse(HpcmPer.Text);
                 ob.HsscOverallPer = float.Parse(HoverallPer.Text);
-                int x = my.PastEdu_Details(ob);
+                ob.DipBoard = Dboard.Text;
+                ob.DipTotObt= int.Parse(DtotMarObt.Text);
+                ob.DipOverallPer = float.Parse(Dpercent.Text);
+                string  x = my.PastEdu_Details(ob);
+                Response.Write(x);
+                string url = "/Student/StudentARFPastEdu.aspx";
+                string script = "window.onload = function(){ alert('";
+                script += x;
+                script += "');";
+                script += "window.location = '";
+                script += url;
+                script += "'; }";
+                ClientScript.RegisterStartupScript(this.GetType(), "Redirect", script, true);
 
             }
             catch(Exception ex)

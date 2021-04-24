@@ -36,7 +36,7 @@
       <s:element name="Fill_FormResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="Fill_FormResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Fill_FormResult" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -60,7 +60,7 @@
       <s:element name="Fill_Coun_FormResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="Fill_Coun_FormResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Fill_Coun_FormResult" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -83,7 +83,7 @@
       <s:element name="Stud_LoginResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="Stud_LoginResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Stud_LoginResult" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -97,7 +97,7 @@
       <s:element name="Genrate_PassResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="Genrate_PassResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Genrate_PassResult" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -111,7 +111,7 @@
       <s:element name="Ask_Again_QueResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="Ask_Again_QueResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Ask_Again_QueResult" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -198,7 +198,7 @@
       <s:element name="ARF_FillResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ARF_FillResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ARF_FillResult" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -237,7 +237,7 @@
       <s:element name="PastEdu_DetailsResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="PastEdu_DetailsResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="PastEdu_DetailsResult" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -261,7 +261,7 @@
       <s:element name="Pass_ResetResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="Pass_ResetResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pass_ResetResult" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -285,6 +285,20 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="1" maxOccurs="1" name="Clerk_LoginResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Pass_Reset_Clerk">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ef" type="tns:ClearkLoginFields" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Pass_Reset_ClerkResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Pass_Reset_ClerkResult" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -368,6 +382,12 @@
   <wsdl:message name="Clerk_LoginSoapOut">
     <wsdl:part name="parameters" element="tns:Clerk_LoginResponse" />
   </wsdl:message>
+  <wsdl:message name="Pass_Reset_ClerkSoapIn">
+    <wsdl:part name="parameters" element="tns:Pass_Reset_Clerk" />
+  </wsdl:message>
+  <wsdl:message name="Pass_Reset_ClerkSoapOut">
+    <wsdl:part name="parameters" element="tns:Pass_Reset_ClerkResponse" />
+  </wsdl:message>
   <wsdl:portType name="ServiceSoap">
     <wsdl:operation name="HelloWorld">
       <wsdl:input message="tns:HelloWorldSoapIn" />
@@ -420,6 +440,10 @@
     <wsdl:operation name="Clerk_Login">
       <wsdl:input message="tns:Clerk_LoginSoapIn" />
       <wsdl:output message="tns:Clerk_LoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Pass_Reset_Clerk">
+      <wsdl:input message="tns:Pass_Reset_ClerkSoapIn" />
+      <wsdl:output message="tns:Pass_Reset_ClerkSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
@@ -541,6 +565,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="Pass_Reset_Clerk">
+      <soap:operation soapAction="http://tempuri.org/Pass_Reset_Clerk" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -654,6 +687,15 @@
     </wsdl:operation>
     <wsdl:operation name="Clerk_Login">
       <soap12:operation soapAction="http://tempuri.org/Clerk_Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Pass_Reset_Clerk">
+      <soap12:operation soapAction="http://tempuri.org/Pass_Reset_Clerk" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

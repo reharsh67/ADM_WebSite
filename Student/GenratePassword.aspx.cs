@@ -29,20 +29,18 @@ namespace ADM_WebSite.Student
             ef.AppID = Int32.Parse(uid.Text);
             try
             {
+                //
+                string myMsg = my.Genrate_Pass(ef);
+                string url = "/Student/StudLogin.aspx";
+                string script = "window.onload = function(){ alert('";
+                script += myMsg;
+                script += "');";
+                script += "window.location = '";
+                script += url;
+                script += "'; }";
+                ClientScript.RegisterStartupScript(this.GetType(), "Redirect", script, true);
 
-                
-                if (my.Genrate_Pass(ef) == 1)
-                {
-                    string myMsg = "Password Set Sucessfully ", myTitle = "Server Says";
-                    ClientScript.RegisterStartupScript(this.GetType(), "Popup", "ShowPopup('" + myMsg + "', '" + myTitle + "');", true);
 
-                }
-                else
-                {
-                    string myMsg = "No Such uid or email detected in Database", myTitle = "Server Says";
-                    ClientScript.RegisterStartupScript(this.GetType(), "Popup", "ShowPopup1('" + myMsg + "', '" + myTitle + "');", true);
-                }
-                
             }
             catch (Exception ex)
 

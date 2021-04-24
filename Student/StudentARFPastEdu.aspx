@@ -400,7 +400,7 @@
                             
                            
                             <center>
-                                         <asp:Button ID="Button1" runat="server"  class="btn btn--radius-2 btn--blue"   Text="Submit" >   </asp:Button>
+                                         <asp:Button ID="Button1" runat="server"  class="btn btn--radius-2 btn--blue" onclick="Save_Past_Edu"  Text="Submit" >   </asp:Button>
                                    </center>
                             <!-- Bootstrap -->
                             <script type="text/javascript" src='https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.3.min.js'></script>

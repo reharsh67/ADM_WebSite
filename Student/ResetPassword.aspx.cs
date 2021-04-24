@@ -30,18 +30,15 @@ namespace ADM_WebSite.Student
             try
             {
 
-
-                if (my.Pass_Reset(ef) == 1)
-                {
-                    string myMsg = "Password Reset Sucessfully ", myTitle = "Server Says";
-                    ClientScript.RegisterStartupScript(this.GetType(), "Popup", "ShowPopup('" + myMsg + "', '" + myTitle + "');", true);
-
-                }
-                else
-                {
-                    string myMsg = "No Such uid or email detected in Database", myTitle = "Server Says";
-                    ClientScript.RegisterStartupScript(this.GetType(), "Popup", "ShowPopup('" + myMsg + "', '" + myTitle + "');", true);
-                }
+                string myMsg = my.Pass_Reset(ef);
+                string url = "/Student/StudDash.aspx";
+                string script = "window.onload = function(){ alert('";
+                script += myMsg;
+                script += "');";
+                script += "window.location = '";
+                script += url;
+                script += "'; }";
+                ClientScript.RegisterStartupScript(this.GetType(), "Redirect", script, true);
 
             }
             catch (Exception ex)

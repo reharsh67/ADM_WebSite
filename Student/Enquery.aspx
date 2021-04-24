@@ -246,7 +246,7 @@
                             <div class="col-2">
                                 <div class="input-group">
                                         <label>Write Your Query </label>
-                                        <asp:TextBox ID="askQue" class="input--style-4" DataValueField="question" width="560px" runat="server" ToolTip="Ask Query"></asp:TextBox>
+                                        <asp:TextBox ID="askQue" class="input--style-4" width="560px" runat="server" ToolTip="Ask Query"></asp:TextBox>
                                         
                                     </div>
                             </div><div class="col-2">

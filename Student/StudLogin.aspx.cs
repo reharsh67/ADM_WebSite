@@ -25,18 +25,26 @@ namespace ADM_WebSite.Student
             ef.Pass = pass.Text;
             try
             {
-                int res =  my.Stud_Login(ef);
+                string res =  my.Stud_Login(ef);
                 Response.Write(res);
-                if (res==0)
+                if (res.Equals("Login sucess"))
             {
-                string myMsg = "login failed ! Invalid Email or Password", myTitle = "Server Says";
-                ClientScript.RegisterStartupScript(this.GetType(), "Popup", "ShowPopup('" + myMsg + "', '" + myTitle + "');", true);
+                    Session["appid"] = Appid.Text;
+                    Response.Redirect("/Student/StudDash.aspx");
+                   
             }
             else
             {
-                Session["appid"] = Appid.Text;
-                Response.Redirect("/Student/StudDash.aspx");
-            }
+
+                    string url = "/Student/StudLogin.aspx";
+                    string script = "window.onload = function(){ alert('";
+                    script += res;
+                    script += "');";
+                    script += "window.location = '";
+                    script += url;
+                    script += "'; }";
+                    ClientScript.RegisterStartupScript(this.GetType(), "Redirect", script, true);
+                }
             }
             catch (Exception ex)
             {

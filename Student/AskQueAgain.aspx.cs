@@ -28,24 +28,23 @@ namespace ADM_WebSite.Student
             ef.Query = askQue.Text;
             try
             {
-                
-                if (my.Ask_Again_Que(ef) == 1)
-                {
-                    string myMsg = "Something went wrong ! Please try again", myTitle = "Server Says";
-                    ClientScript.RegisterStartupScript(this.GetType(), "Popup", "ShowPopup('" + myMsg + "', '" + myTitle + "');", true);
 
-                }
-                else
-                {
-                    string myMsg = "Query Posted !", myTitle = "Server Says";
-                    ClientScript.RegisterStartupScript(this.GetType(), "Popup", "ShowPopup1('" + myMsg + "', '" + myTitle + "');", true);
-                }
+
+                string res = my.Ask_Again_Que(ef);
+                string url = "/Student/AskQueAgain.aspx";
+                string script = "window.onload = function(){ alert('";
+                script += res;
+                script += "');";
+                script += "window.location = '";
+                script += url;
+                script += "'; }";
+                ClientScript.RegisterStartupScript(this.GetType(), "Redirect", script, true);
 
             }
             catch (Exception ex)
 
             { Response.Write(ex); }
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('Query Saved Sucessfully');window.location='AskQueAgain.aspx';", true);
+           // ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('Query Saved Sucessfully');window.location='AskQueAgain.aspx';", true);
 
         }
 

@@ -25,28 +25,22 @@ namespace ADM_WebSite.Student
             ef.Email = EMAIL.Text;
             ef.Phno = MobNo.Text;
             ef.State = statebox.Text;
-            ef.Query = askQue.Text;
+            if (String.IsNullOrEmpty(askQue.Text))
+                ef.Query = null;
+            else
+                ef.Query = askQue.Text;
             try
             {
-                int res = my.Fill_Form(ef);
-                if (res == 1)
-                {
-                    int x = my.Gen_Appid();
-                    string myMsg = "Data Save Sucess! Note This Appid  '" + x + "'", myTitle = "Server Says";
-                    ClientScript.RegisterStartupScript(this.GetType(), "Popup", "ShowPopup('" + myMsg + "', '" + myTitle + "');", true);
-                }
-                if (res == 2)
-                {
-                   
-                    string myMsg = "Query Saved  " , myTitle = "Server Says";
-                    ClientScript.RegisterStartupScript(this.GetType(), "Popup", "ShowPopup('" + myMsg + "', '" + myTitle + "');", true);
-                }
-                if (res == 0)
-                {
-               
-                    string myMsg = "Duplicate data detected ", myTitle = "Server Says";
-                    ClientScript.RegisterStartupScript(this.GetType(), "Popup", "ShowPopup('" + myMsg + "', '" + myTitle + "');", true);
-                }
+                int x = my.Gen_Appid();
+                string res = my.Fill_Form(ef)+" Note This Application ID :  [ "+x+" ]";
+                string url = "/Student/Enquery.aspx";
+                string script = "window.onload = function(){ alert('";
+                script += res;
+                script += "');";
+                script += "window.location = '";
+                script += url;
+                script += "'; }";
+                ClientScript.RegisterStartupScript(this.GetType(), "Redirect", script, true);
             }
             catch (Exception ex)
 

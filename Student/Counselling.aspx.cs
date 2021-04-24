@@ -44,17 +44,17 @@ namespace ADM_WebSite.Student
             try
             {
 
-                int res = my.Fill_Coun_Form(ef);
-                if (res == 0)
-                {
-                    string myMsg = "Session Booked ", myTitle = "Server Says";
-                    ClientScript.RegisterStartupScript(this.GetType(), "Popup", "ShowPopup('" + myMsg + "', '" + myTitle + "');", true);
-                }
-                else
-                {
-                    string myMsg = "Something Went Wrong", myTitle = "Server Says";
-                    ClientScript.RegisterStartupScript(this.GetType(), "Popup", "ShowPopup('" + myMsg + "', '" + myTitle + "');", true);
-                }
+               
+                string x = my.Fill_Coun_Form(ef);
+                Response.Write(x);
+                string url = "/Student/Counselling.aspx";
+                string script = "window.onload = function(){ alert('";
+                script += x;
+                script += "');";
+                script += "window.location = '";
+                script += url;
+                script += "'; }";
+                ClientScript.RegisterStartupScript(this.GetType(), "Redirect", script, true);
             }
             catch (Exception ex)
 

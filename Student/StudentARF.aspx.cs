@@ -25,7 +25,7 @@ namespace ADM_WebSite.Student
                 try
                 {
                     DataTable dt =  my.Pre_Fill_ARF(eff);
-                    AppidTxt.Text = ((Int32)dt.Rows[0]["r_appid"]).ToString();
+                    AppidTxt.Text = appid.ToString();
                     fName.Text = (string)dt.Rows[0]["r_firstname"];
                     mName.Text = (string)dt.Rows[0]["r_middlename"];
                     lName.Text = (string)dt.Rows[0]["r_lastname"];
@@ -71,8 +71,17 @@ namespace ADM_WebSite.Student
                 ob.AcademicYear = academicyr.Text;
                 ob.AdmissionIn = admissionyr.Text;
 
-                my.ARF_Fill(ob);
-
+                
+                string x = my.ARF_Fill(ob);
+                Response.Write(x);
+                string url = "/Student/StudentARFPastEdu.aspx";
+                string script = "window.onload = function(){ alert('";
+                script += x;
+                script += "');";
+                script += "window.location = '";
+                script += url;
+                script += "'; }";
+                ClientScript.RegisterStartupScript(this.GetType(), "Redirect", script, true);
             }
             catch (Exception ex)
             {

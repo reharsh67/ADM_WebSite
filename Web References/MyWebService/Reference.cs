@@ -56,6 +56,8 @@ namespace ADM_WebSite.MyWebService {
         
         private System.Threading.SendOrPostCallback Clerk_LoginOperationCompleted;
         
+        private System.Threading.SendOrPostCallback Pass_Reset_ClerkOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -134,6 +136,9 @@ namespace ADM_WebSite.MyWebService {
         public event Clerk_LoginCompletedEventHandler Clerk_LoginCompleted;
         
         /// <remarks/>
+        public event Pass_Reset_ClerkCompletedEventHandler Pass_Reset_ClerkCompleted;
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/HelloWorld", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public string HelloWorld() {
             object[] results = this.Invoke("HelloWorld", new object[0]);
@@ -162,10 +167,10 @@ namespace ADM_WebSite.MyWebService {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/Fill_Form", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public int Fill_Form(EnqueryFields ef) {
+        public string Fill_Form(EnqueryFields ef) {
             object[] results = this.Invoke("Fill_Form", new object[] {
                         ef});
-            return ((int)(results[0]));
+            return ((string)(results[0]));
         }
         
         /// <remarks/>
@@ -191,10 +196,10 @@ namespace ADM_WebSite.MyWebService {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/Fill_Coun_Form", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public int Fill_Coun_Form(CounsellingFields ef) {
+        public string Fill_Coun_Form(CounsellingFields ef) {
             object[] results = this.Invoke("Fill_Coun_Form", new object[] {
                         ef});
-            return ((int)(results[0]));
+            return ((string)(results[0]));
         }
         
         /// <remarks/>
@@ -220,10 +225,10 @@ namespace ADM_WebSite.MyWebService {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/Stud_Login", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public int Stud_Login(StudLoginFields ef) {
+        public string Stud_Login(StudLoginFields ef) {
             object[] results = this.Invoke("Stud_Login", new object[] {
                         ef});
-            return ((int)(results[0]));
+            return ((string)(results[0]));
         }
         
         /// <remarks/>
@@ -249,10 +254,10 @@ namespace ADM_WebSite.MyWebService {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/Genrate_Pass", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public int Genrate_Pass(StudLoginFields ef) {
+        public string Genrate_Pass(StudLoginFields ef) {
             object[] results = this.Invoke("Genrate_Pass", new object[] {
                         ef});
-            return ((int)(results[0]));
+            return ((string)(results[0]));
         }
         
         /// <remarks/>
@@ -278,10 +283,10 @@ namespace ADM_WebSite.MyWebService {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/Ask_Again_Que", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public int Ask_Again_Que(EnqueryFields ef) {
+        public string Ask_Again_Que(EnqueryFields ef) {
             object[] results = this.Invoke("Ask_Again_Que", new object[] {
                         ef});
-            return ((int)(results[0]));
+            return ((string)(results[0]));
         }
         
         /// <remarks/>
@@ -365,10 +370,10 @@ namespace ADM_WebSite.MyWebService {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ARF_Fill", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public int ARF_Fill(ARFFormFields ef) {
+        public string ARF_Fill(ARFFormFields ef) {
             object[] results = this.Invoke("ARF_Fill", new object[] {
                         ef});
-            return ((int)(results[0]));
+            return ((string)(results[0]));
         }
         
         /// <remarks/>
@@ -394,10 +399,10 @@ namespace ADM_WebSite.MyWebService {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/PastEdu_Details", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public int PastEdu_Details(PastEduFields ef) {
+        public string PastEdu_Details(PastEduFields ef) {
             object[] results = this.Invoke("PastEdu_Details", new object[] {
                         ef});
-            return ((int)(results[0]));
+            return ((string)(results[0]));
         }
         
         /// <remarks/>
@@ -450,10 +455,10 @@ namespace ADM_WebSite.MyWebService {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/Pass_Reset", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public int Pass_Reset(StudLoginFields ef) {
+        public string Pass_Reset(StudLoginFields ef) {
             object[] results = this.Invoke("Pass_Reset", new object[] {
                         ef});
-            return ((int)(results[0]));
+            return ((string)(results[0]));
         }
         
         /// <remarks/>
@@ -503,6 +508,35 @@ namespace ADM_WebSite.MyWebService {
             if ((this.Clerk_LoginCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.Clerk_LoginCompleted(this, new Clerk_LoginCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/Pass_Reset_Clerk", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int Pass_Reset_Clerk(ClearkLoginFields ef) {
+            object[] results = this.Invoke("Pass_Reset_Clerk", new object[] {
+                        ef});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void Pass_Reset_ClerkAsync(ClearkLoginFields ef) {
+            this.Pass_Reset_ClerkAsync(ef, null);
+        }
+        
+        /// <remarks/>
+        public void Pass_Reset_ClerkAsync(ClearkLoginFields ef, object userState) {
+            if ((this.Pass_Reset_ClerkOperationCompleted == null)) {
+                this.Pass_Reset_ClerkOperationCompleted = new System.Threading.SendOrPostCallback(this.OnPass_Reset_ClerkOperationCompleted);
+            }
+            this.InvokeAsync("Pass_Reset_Clerk", new object[] {
+                        ef}, this.Pass_Reset_ClerkOperationCompleted, userState);
+        }
+        
+        private void OnPass_Reset_ClerkOperationCompleted(object arg) {
+            if ((this.Pass_Reset_ClerkCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Pass_Reset_ClerkCompleted(this, new Pass_Reset_ClerkCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -1511,10 +1545,10 @@ namespace ADM_WebSite.MyWebService {
         }
         
         /// <remarks/>
-        public int Result {
+        public string Result {
             get {
                 this.RaiseExceptionIfNecessary();
-                return ((int)(this.results[0]));
+                return ((string)(this.results[0]));
             }
         }
     }
@@ -1537,10 +1571,10 @@ namespace ADM_WebSite.MyWebService {
         }
         
         /// <remarks/>
-        public int Result {
+        public string Result {
             get {
                 this.RaiseExceptionIfNecessary();
-                return ((int)(this.results[0]));
+                return ((string)(this.results[0]));
             }
         }
     }
@@ -1563,10 +1597,10 @@ namespace ADM_WebSite.MyWebService {
         }
         
         /// <remarks/>
-        public int Result {
+        public string Result {
             get {
                 this.RaiseExceptionIfNecessary();
-                return ((int)(this.results[0]));
+                return ((string)(this.results[0]));
             }
         }
     }
@@ -1589,10 +1623,10 @@ namespace ADM_WebSite.MyWebService {
         }
         
         /// <remarks/>
-        public int Result {
+        public string Result {
             get {
                 this.RaiseExceptionIfNecessary();
-                return ((int)(this.results[0]));
+                return ((string)(this.results[0]));
             }
         }
     }
@@ -1615,10 +1649,10 @@ namespace ADM_WebSite.MyWebService {
         }
         
         /// <remarks/>
-        public int Result {
+        public string Result {
             get {
                 this.RaiseExceptionIfNecessary();
-                return ((int)(this.results[0]));
+                return ((string)(this.results[0]));
             }
         }
     }
@@ -1693,10 +1727,10 @@ namespace ADM_WebSite.MyWebService {
         }
         
         /// <remarks/>
-        public int Result {
+        public string Result {
             get {
                 this.RaiseExceptionIfNecessary();
-                return ((int)(this.results[0]));
+                return ((string)(this.results[0]));
             }
         }
     }
@@ -1719,10 +1753,10 @@ namespace ADM_WebSite.MyWebService {
         }
         
         /// <remarks/>
-        public int Result {
+        public string Result {
             get {
                 this.RaiseExceptionIfNecessary();
-                return ((int)(this.results[0]));
+                return ((string)(this.results[0]));
             }
         }
     }
@@ -1771,10 +1805,10 @@ namespace ADM_WebSite.MyWebService {
         }
         
         /// <remarks/>
-        public int Result {
+        public string Result {
             get {
                 this.RaiseExceptionIfNecessary();
-                return ((int)(this.results[0]));
+                return ((string)(this.results[0]));
             }
         }
     }
@@ -1792,6 +1826,32 @@ namespace ADM_WebSite.MyWebService {
         private object[] results;
         
         internal Clerk_LoginCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Pass_Reset_ClerkCompletedEventHandler(object sender, Pass_Reset_ClerkCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class Pass_Reset_ClerkCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal Pass_Reset_ClerkCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
