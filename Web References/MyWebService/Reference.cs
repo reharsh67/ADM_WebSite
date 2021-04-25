@@ -54,6 +54,14 @@ namespace ADM_WebSite.MyWebService {
         
         private System.Threading.SendOrPostCallback Pass_ResetOperationCompleted;
         
+        private System.Threading.SendOrPostCallback Upload_DocOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Doc_ListOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback State_ListOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback City_ListsOperationCompleted;
+        
         private System.Threading.SendOrPostCallback Clerk_LoginOperationCompleted;
         
         private System.Threading.SendOrPostCallback Pass_Reset_ClerkOperationCompleted;
@@ -131,6 +139,18 @@ namespace ADM_WebSite.MyWebService {
         
         /// <remarks/>
         public event Pass_ResetCompletedEventHandler Pass_ResetCompleted;
+        
+        /// <remarks/>
+        public event Upload_DocCompletedEventHandler Upload_DocCompleted;
+        
+        /// <remarks/>
+        public event Doc_ListCompletedEventHandler Doc_ListCompleted;
+        
+        /// <remarks/>
+        public event State_ListCompletedEventHandler State_ListCompleted;
+        
+        /// <remarks/>
+        public event City_ListsCompletedEventHandler City_ListsCompleted;
         
         /// <remarks/>
         public event Clerk_LoginCompletedEventHandler Clerk_LoginCompleted;
@@ -483,6 +503,118 @@ namespace ADM_WebSite.MyWebService {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/Upload_Doc", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string Upload_Doc(DocumentFields ef) {
+            object[] results = this.Invoke("Upload_Doc", new object[] {
+                        ef});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void Upload_DocAsync(DocumentFields ef) {
+            this.Upload_DocAsync(ef, null);
+        }
+        
+        /// <remarks/>
+        public void Upload_DocAsync(DocumentFields ef, object userState) {
+            if ((this.Upload_DocOperationCompleted == null)) {
+                this.Upload_DocOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpload_DocOperationCompleted);
+            }
+            this.InvokeAsync("Upload_Doc", new object[] {
+                        ef}, this.Upload_DocOperationCompleted, userState);
+        }
+        
+        private void OnUpload_DocOperationCompleted(object arg) {
+            if ((this.Upload_DocCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Upload_DocCompleted(this, new Upload_DocCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/Doc_List", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet Doc_List() {
+            object[] results = this.Invoke("Doc_List", new object[0]);
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void Doc_ListAsync() {
+            this.Doc_ListAsync(null);
+        }
+        
+        /// <remarks/>
+        public void Doc_ListAsync(object userState) {
+            if ((this.Doc_ListOperationCompleted == null)) {
+                this.Doc_ListOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDoc_ListOperationCompleted);
+            }
+            this.InvokeAsync("Doc_List", new object[0], this.Doc_ListOperationCompleted, userState);
+        }
+        
+        private void OnDoc_ListOperationCompleted(object arg) {
+            if ((this.Doc_ListCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Doc_ListCompleted(this, new Doc_ListCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/State_List", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet State_List() {
+            object[] results = this.Invoke("State_List", new object[0]);
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void State_ListAsync() {
+            this.State_ListAsync(null);
+        }
+        
+        /// <remarks/>
+        public void State_ListAsync(object userState) {
+            if ((this.State_ListOperationCompleted == null)) {
+                this.State_ListOperationCompleted = new System.Threading.SendOrPostCallback(this.OnState_ListOperationCompleted);
+            }
+            this.InvokeAsync("State_List", new object[0], this.State_ListOperationCompleted, userState);
+        }
+        
+        private void OnState_ListOperationCompleted(object arg) {
+            if ((this.State_ListCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.State_ListCompleted(this, new State_ListCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/City_Lists", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet City_Lists(int s) {
+            object[] results = this.Invoke("City_Lists", new object[] {
+                        s});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void City_ListsAsync(int s) {
+            this.City_ListsAsync(s, null);
+        }
+        
+        /// <remarks/>
+        public void City_ListsAsync(int s, object userState) {
+            if ((this.City_ListsOperationCompleted == null)) {
+                this.City_ListsOperationCompleted = new System.Threading.SendOrPostCallback(this.OnCity_ListsOperationCompleted);
+            }
+            this.InvokeAsync("City_Lists", new object[] {
+                        s}, this.City_ListsOperationCompleted, userState);
+        }
+        
+        private void OnCity_ListsOperationCompleted(object arg) {
+            if ((this.City_ListsCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.City_ListsCompleted(this, new City_ListsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/Clerk_Login", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public int Clerk_Login(ClearkLoginFields ef) {
             object[] results = this.Invoke("Clerk_Login", new object[] {
@@ -763,6 +895,63 @@ namespace ADM_WebSite.MyWebService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class DocumentFields {
+        
+        private string docNameField;
+        
+        private int appIDField;
+        
+        private int docIDField;
+        
+        private string docPathField;
+        
+        /// <remarks/>
+        public string DocName {
+            get {
+                return this.docNameField;
+            }
+            set {
+                this.docNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int AppID {
+            get {
+                return this.appIDField;
+            }
+            set {
+                this.appIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int DocID {
+            get {
+                return this.docIDField;
+            }
+            set {
+                this.docIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string DocPath {
+            get {
+                return this.docPathField;
+            }
+            set {
+                this.docPathField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class PastEduFields {
         
         private int appIDField;
@@ -1026,6 +1215,8 @@ namespace ADM_WebSite.MyWebService {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class ARFFormFields {
         
+        private string categoryField;
+        
         private string uidField;
         
         private string phnoField;
@@ -1079,6 +1270,16 @@ namespace ADM_WebSite.MyWebService {
         private string academicYearField;
         
         private string admissionInField;
+        
+        /// <remarks/>
+        public string Category {
+            get {
+                return this.categoryField;
+            }
+            set {
+                this.categoryField = value;
+            }
+        }
         
         /// <remarks/>
         public string Uid {
@@ -1809,6 +2010,110 @@ namespace ADM_WebSite.MyWebService {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Upload_DocCompletedEventHandler(object sender, Upload_DocCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class Upload_DocCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal Upload_DocCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Doc_ListCompletedEventHandler(object sender, Doc_ListCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class Doc_ListCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal Doc_ListCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void State_ListCompletedEventHandler(object sender, State_ListCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class State_ListCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal State_ListCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void City_ListsCompletedEventHandler(object sender, City_ListsCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class City_ListsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal City_ListsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
             }
         }
     }

@@ -12,9 +12,16 @@ namespace ADM_WebSite.Student
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            AppidTxt.Text = (Session["appid"]).ToString();
-            if (Session["appid"] == null)
-                Response.Redirect("/Student/Error.aspx");
+            //AppidTxt.Text = (Session["appid"]).ToString();
+            //if (Session["appid"] == null)
+            //    Response.Redirect("/Student/Error.aspx");
+            //else
+            //{
+            //    Response.ClearHeaders();
+            //    Response.AddHeader("Cache-Control", "no-cache, no-store, max-age=0, must-revalidate");
+            //    Response.AddHeader("Pragma", "no-cache");
+                
+            //}
         }
         protected void Save_Past_Edu(object sender, EventArgs e)
         {

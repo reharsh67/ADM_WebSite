@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="StudentARFPastEdu.aspx.cs" Inherits="ADM_WebSite.Student.StudentARFPastEdu" %>
+
 <!DOCTYPE html>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -8,91 +9,92 @@
 </a>
 <!-- END SCROLL TOP BUTTON -->
 <div class="fixed-header">
-<!-- Start header  -->
-<header id="mu-header">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 col-md-12">
-                <div class="mu-header-area">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                            <div class="mu-header-top-left">
-                                <div class="mu-top-email">
-                                    <i class="fa fa-envelope"></i>
-                                    <span>info@stvincentngp.edu.in</span>
-                                </div>
-                                <div class="mu-top-phone">
-                                    <i class="fa fa-phone"></i>
-                                    <span>+91 7743979315  </span>
+    <!-- Start header  -->
+    <header id="mu-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="mu-header-area">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <div class="mu-header-top-left">
+                                    <div class="mu-top-email">
+                                        <i class="fa fa-envelope"></i>
+                                        <span>info@stvincentngp.edu.in</span>
+                                    </div>
+                                    <div class="mu-top-phone">
+                                        <i class="fa fa-phone"></i>
+                                        <span>+91 7743979315  </span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                            <div class="mu-header-top-right">
-                                <nav>
-                                    <ul class="mu-top-social-nav">
-                                        <li><a href="https://www.facebook.com/stvincentngp/"><span class="fa fa-facebook"></span></a></li>
-                                        <li><a href="https://twitter.com/techpallottines"><span class="fa fa-twitter"></span></a></li>
-                                        <li><a href="https://www.youtube.com/channel/UCwI-u4lNseB2N9t2H5otnVA"><span class="fa fa-youtube"></span></a></li>
-                                    </ul>
-                                </nav>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <div class="mu-header-top-right">
+                                    <nav>
+                                        <ul class="mu-top-social-nav">
+                                            <li><a href="https://www.facebook.com/stvincentngp/"><span class="fa fa-facebook"></span></a></li>
+                                            <li><a href="https://twitter.com/techpallottines"><span class="fa fa-twitter"></span></a></li>
+                                            <li><a href="https://www.youtube.com/channel/UCwI-u4lNseB2N9t2H5otnVA"><span class="fa fa-youtube"></span></a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</header>
-<!-- End header  -->
-<!-- Start menu -->
-<section id="mu-menu">
-    <nav class="navbar navbar-default" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <!-- LOGO -->
-                <!-- TEXT BASED LOGO -->
-                
-                <!-- IMG BASED LOGO  -->
-                <span></span>
-                <a class="profile-pic1" href="#">
-                    <img src="content/logo.png" alt="logo" width="350" height="70"></a>
+    </header>
+    <!-- End header  -->
+    <!-- Start menu -->
+    <section id="mu-menu">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- LOGO -->
+                    <!-- TEXT BASED LOGO -->
+
+                    <!-- IMG BASED LOGO  -->
+                    <span></span>
+                    <a class="profile-pic1" href="#">
+                        <img src="content/logo.png" alt="logo" width="350" height="70"></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
+                        <li><a href="/Student/StudDash.aspx">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Actions <span class="fa fa-angle-down"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/Student/AskQueAgain.aspx">Write a Query </a></li>
+                                <li><a href="/Student/CounsellingAfterLogin.aspx">Book Counselling Session </a></li>
+                                <li><a href="/Student/ResetPassword.aspx">Reset Password</a></li>
+                                <li><a href="/Student/StudentARF.aspx">Fill ARF</a></li>
+                                <li><a href="/Student/StudentARFPastEdu.aspx">Fill ARF Past Edu</a></li>
+                                <li><a href="/Student/UploadDocuments.aspx">Uplaod Documents</a></li>
+                                <li><a href="/Student/ViewQueryResp.aspx">View Query Responses</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li class="right-div">
+                            <a href="/Student/StudLogin.aspx" class=" btn--radius-2 "><span class="color:white;">LOGOUT</span></a>
+                        </li>
+
+
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
             </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
-                    <li><a href="/Student/StudDash.aspx">Home</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Actions <span class="fa fa-angle-down"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="/Student/AskQueAgain.aspx">Write a Query </a></li>
-                            <li><a href="/Student/CounsellingAfterLogin.aspx">Book Counselling Session </a></li>
-                            <li><a href="/Student/ResetPassword.aspx">Reset Password</a></li>
-                            <li><a href="/Student/StudentARF.aspx">Fill ARF</a></li>
-                            <li><a href="/Student/StudentARFPastEdu.aspx">Fill ARF Past Edu</a></li>
-                            <li><a href="/Student/UploadDocuments.aspx">Uplaod Documents</a></li>
-                             <li><a href="/Student/ViewQueryResp.aspx">View Query Responses</a></li>
-                        </ul>
-                    </li>
-
-                    
-                   <li class="right-div">
-               <a href="/Student/StudLogin.aspx" class=" btn--radius-2 "><span class="color:white;">LOGOUT</span></a>
-            </li>
-
-
-                </ul>
-            </div>
-            <!--/.nav-collapse -->
-        </div>
-    </nav>
-</section></div>
+        </nav>
+    </section>
+</div>
 <br />
 <br />
 <head>
@@ -139,266 +141,262 @@
 </head>
 
 <body>
-    
- 
 
 
-    
-        
 
 
-    
-            <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+
+
+
+
+
+    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
         <div class="wrapper wrapper--w680">
             <div class="card card-4">
                 <div class="card-body">
-                        <h2 class="title">Fill Out Past Educational Details</h2>
-                        <form method="POST" runat="server">
-                            <div class="row row-space">
-                                <div class="col-2">
-                                    <div class="input-group">
-                                        <asp:Label ID="Label7" class="" runat="server" Text=" "><b>Application - ID </b><span class="required"> *</span></asp:Label>
-                                        <asp:TextBox ID="AppidTxt"    class="input--style-4" runat="server" required   ></asp:TextBox>
+                    <h2 class="title">Fill Out Past Educational Details</h2>
+                    <form method="POST" runat="server">
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <asp:Label ID="Label7" class="" runat="server" Text=" "><b>Application - ID </b><span class="required"> *</span></asp:Label>
+                                    <asp:TextBox ID="AppidTxt" class="input--style-4" runat="server" required></asp:TextBox>
 
 
-                                      </div>
-                                </div>
-                                <div class="col-2">
-                                    <div class="input-group">
-
-                                      
-
-
-                                    </div>
                                 </div>
                             </div>
-                             <hr style="width:560px;text-align:left;margin-left:0;color:palegreen;">
-                            <br />
-                            <div class="row row-space">
-                                <div class="col-2">
-                                    <div class="input-group">
-
-                                        <label>Hssc Board<span class="required"><b>*</b></span></label>
-                                        <asp:TextBox ID="HBoard"    class="input--style-4" runat="server" Width="560px" required ></asp:TextBox>
-
-
-                                      </div>
-                                </div>
-                                <div class="col-2">
-                                    <div class="input-group">
-
-                                      
-
-
-                                    </div>
+                            <div class="col-2">
+                                <div class="input-group">
                                 </div>
                             </div>
-                            <div class="row row-space">
-                                <div class="col-2">
-                                    <div class="input-group">
-                                        <label>HSSC Total Marks Obtained <span class="required"><b>*</b></span></label>
-                                        <asp:TextBox ID="HtotMarObt" class="input--style-4"    runat="server" required ></asp:TextBox>
+                        </div>
+                        <hr style="width: 560px; text-align: left; margin-left: 0; color: palegreen;">
+                        <br />
+
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+
+                                    <label>HSC Board<span class="required"><b>*</b></span></label>
+                                    <asp:TextBox ID="HBoard" class="input--style-4" runat="server" Width="560px" required></asp:TextBox>
 
 
-                                    </div>
-                                </div>
-                                <div class="col-2">
-                                    <div class="input-group">
-
-                                        <label>HSSC Total Marks <span class="required"><b>*</b></span></label>
-                                        <asp:TextBox ID="HtotMar" class="input--style-4"    runat="server" required ></asp:TextBox>
-
-
-                                    </div>
                                 </div>
                             </div>
-                            <div class="row row-space">
-                                <div class="col-2">
-                                    <div class="input-group">
-                                        <label>HSSC Physics Marks  <span class="required"><b>*</b></span></label>
-                                        <asp:TextBox ID="HphyMar"    class="input--style-4"  runat="server"  ></asp:TextBox>
-                                       
-
-
-                                    </div>
-                                </div>
-                                <div class="col-2">
-                                    <div class="input-group">
-                                        <label>HSSC Chemistry Marks<span class="required"><b>*</b></span></label>
-                                        <asp:TextBox ID="HchemMar" class="input--style-4"     runat="server" ></asp:TextBox>
-                                        
-
-                                    </div>
+                            <div class="col-2">
+                                <div class="input-group">
                                 </div>
                             </div>
-                            <div class="row row-space">
-                                <div class="col-2">
-                                    <div class="input-group">
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label>HSC Total Marks Obtained <span class="required"><b>*</b></span></label>
+                                    <asp:TextBox ID="HtotMarObt" class="input--style-4" runat="server" required></asp:TextBox>
 
-                                        <asp:Label ID="state" runat="server" Text="State "><b>HSSC Maths Marks  </b><span class="required"> *</span></asp:Label>
-                                        <asp:TextBox ID="HmatMar" class="input--style-4"     runat="server"    ></asp:TextBox>
 
-
-                                    </div>
                                 </div>
-                                <div class="col-2">
-                                    <div class="input-group">
-                                        <label>HSSC PCM Total Marks <span class="required"><b>*</b></span></label>
-                                        <asp:TextBox ID="HpcmTot" class="input--style-4" runat="server"     ToolTip="Enter City name"></asp:TextBox>
-
-
-                                    </div>
-                                </div>
-
                             </div>
-                            <div class="row row-space">
-                                <div class="col-2">
-                                    <div class="input-group">
+                            <div class="col-2">
+                                <div class="input-group">
 
-                                       <asp:Label ID="Label6" runat="server" Text="State "><b>HSSC PCM Percentage  </b><span class="required"> *</span><h7>(Dont use % symbol)</h7></asp:Label>
-                                        <asp:TextBox ID="HpcmPer" DataValueField="StreamName" class="input--style-4" runat="server" required ToolTip=""></asp:TextBox>
+                                    <label>HSC Total Marks <span class="required"><b>*</b></span></label>
+                                    <asp:TextBox ID="HtotMar" class="input--style-4" runat="server" required></asp:TextBox>
 
 
-                                    </div>
                                 </div>
-                                <div class="col-2">
-                                    <div class="input-group">
-                                        <asp:Label ID="Label1" runat="server" Text="State "><b>HSSC Overall Percentage  </b><span class="required"> *</span><h7>(Dont use % symbol)</h7></asp:Label>
-                                        <asp:TextBox ID="HoverallPer" class="input--style-4" runat="server"  Height="50px" required ReadOnly="false" onclick="ToggleValidator(this);"></asp:TextBox>
-                                    </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label>HSC Physics Marks  <span class="required"><b>*</b></span></label>
+                                    <asp:TextBox ID="HphyMar" class="input--style-4" runat="server"></asp:TextBox>
+
+                                    <asp:RangeValidator ID="percentageRangeValidator" runat="server" ControlToValidate="HphyMar" Display="Dynamic" ErrorMessage="Invalid Marks" MaximumValue="100" MinimumValue="0" Type ="Double"></asp:RangeValidator> 
+
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label>HSC Chemistry Marks<span class="required"><b>*</b></span></label>
+                                    <asp:TextBox ID="HchemMar" class="input--style-4" runat="server"></asp:TextBox>
+                                    <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="HchemMar" Display="Dynamic" ErrorMessage="Invalid Marks" MaximumValue="100" MinimumValue="0" Type ="Double"></asp:RangeValidator> 
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+
+                                    <asp:Label ID="state" runat="server" Text="State "><b>HSC Maths Marks  </b><span class="required"> *</span></asp:Label>
+                                    <asp:TextBox ID="HmatMar" class="input--style-4" runat="server"></asp:TextBox>
+                                    <asp:RangeValidator ID="RangeValidator2" runat="server" ControlToValidate="HmatMar" Display="Dynamic" ErrorMessage="Invalid Marks" MaximumValue="100" MinimumValue="0" Type ="Double"></asp:RangeValidator> 
+
+
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label>HSC PCM Total Marks <span class="required"><b>*</b></span></label>
+                                    <asp:TextBox ID="HpcmTot" class="input--style-4" runat="server" ToolTip="Enter City name"></asp:TextBox>
+
+
                                 </div>
                             </div>
 
-                            <div class="row row-space">
-                                <div class="col-2">
-                                    <div class="input-group">
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
 
-                                        <label>HSSC Grade<span class="required"><b>*</b></span></label>
-                                        <asp:TextBox ID="Hgrade" DataValueField="StreamName" class="input--style-4" runat="server" required ToolTip=""></asp:TextBox>
+                                    <asp:Label ID="Label6" runat="server" Text="State "><b>HSC PCM Percentage  </b><span class="required"> *</span><h7>(Dont use % symbol)</h7></asp:Label>
+                                    <asp:TextBox ID="HpcmPer" DataValueField="StreamName" class="input--style-4" runat="server" required ToolTip=""></asp:TextBox>
+                                    <asp:RangeValidator ID="RangeValidator3" runat="server" ControlToValidate="HpcmPer" Display="Dynamic" ErrorMessage="Invalid Percentage" MaximumValue="100.0" MinimumValue="0.00" Type ="Double"></asp:RangeValidator> 
 
 
-                                    </div>
-                                </div>
-                                <div class="col-2">
-                                    <div class="input-group">
-                                        </div>
                                 </div>
                             </div>
-                            <hr style="width:560px;text-align:left;margin-left:0;color:palegreen;">
-                            <br />
-                          
-                            <div class="row row-space">
-                                <div class="col-2">
-                                    <div class="input-group">
-                                        <asp:Label ID="Label2" runat="server" Text="State "><b>SSC Board </b><span class="required"> *</span></asp:Label>
-                                        <asp:TextBox ID="Sboard" DataValueField="FaCon" Width="560px" class="input--style-4" runat="server" required   ></asp:TextBox>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <asp:Label ID="Label1" runat="server" Text="State "><b>HSC Overall Percentage  </b><span class="required"> *</span><h7>(Dont use % symbol)</h7></asp:Label>
+                                    <asp:TextBox ID="HoverallPer" class="input--style-4" runat="server" Height="50px" required ReadOnly="false" onclick="ToggleValidator(this);"></asp:TextBox>
+                                <asp:RangeValidator ID="RangeValidator4" runat="server" ControlToValidate="HoverallPer" Display="Dynamic" ErrorMessage="Invalid Percentage" MaximumValue="100.0" MinimumValue="0.00" Type ="Double"></asp:RangeValidator> 
 
-                                    </div>
-                                </div>
-                                <div class="col-2">
-                                    <div class="input-group">
-                                        
-                                    </div>
                                 </div>
                             </div>
-                            <div class="row row-space">
-                                <div class="col-2">
-                                    <div class="input-group">
-                                        <asp:Label ID="Label3" runat="server" Text="State "><b>SSC Total Marks Obtained  </b><span class="required"> *</span></asp:Label>
-                                        <asp:TextBox ID="StotMarObt" DataValueField="FaOcup" class="input--style-4" runat="server" required   ></asp:TextBox>
+                        </div>
+
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+
+                                    <label>HSC Grade<span class="required"><b>*</b></span></label>
+                                    <asp:TextBox ID="Hgrade" DataValueField="StreamName" class="input--style-4" runat="server" required ToolTip=""></asp:TextBox>
 
 
-                                    </div>
-                                </div>
-                                <div class="col-2">
-                                    <div class="input-group">
-                                        <asp:Label ID="Label4" runat="server" Text="State "><b>SSC Percentage  </b><span class="required"> *</span><h7>(Dont use % symbol)</h7></asp:Label>
-                                        <asp:TextBox ID="Spercent" DataValueField="MoName" class="input--style-4" runat="server" required   ></asp:TextBox>
-
-                                    </div>
                                 </div>
                             </div>
-                             <hr style="width:560px;text-align:left;margin-left:0;color:palegreen;">
-                          <br />
-                            <div class="row row-space">
-                                <div class="col-2">
-                                    <div class="input-group">
-                                        <asp:Label ID="Label5" runat="server" Text="State "><b>Diploma Board </b><span class="required"> *</span></asp:Label>
-                                        <asp:TextBox ID="Dboard" DataValueField="MoCon" Width="560px" class="input--style-4" runat="server" required   ></asp:TextBox>
-
-                                    </div>
-                                </div>
-                                <div class="col-2">
-                                    <div class="input-group">
-                                        </div>
+                            <div class="col-2">
+                                <div class="input-group">
                                 </div>
                             </div>
-                            <div class="row row-space">
-                                <div class="col-2">
-                                    <div class="input-group">
-                                        <asp:Label ID="Label17" runat="server" Text="State "><b>Diploma Total Marks Obtained </b><span class="required"> *</span>‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‎‎‎‎</asp:Label>
-                                        <asp:TextBox ID="DtotMarObt" DataValueField="MoName" class="input--style-4" runat="server" required   ></asp:TextBox>
+                        </div>
+                        <hr style="width: 560px; text-align: left; margin-left: 0; color: palegreen;">
+                        <br />
 
-                                    </div>
-                                </div>
-                                <div class="col-2">
-                                    <div class="input-group">
-                                        <asp:Label ID="Label8" runat="server" Text="State "><b>Diploma Percentage </b> <span class="required"> *</span> <h7>(Dont use % symbol)</h7></asp:Label>
-                                        <asp:TextBox ID="Dpercent" DataValueField="" class="input--style-4" runat="server" required   ></asp:TextBox>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <asp:Label ID="Label2" runat="server" Text="State "><b>SSC Board </b><span class="required"> *</span></asp:Label>
+                                    <asp:TextBox ID="Sboard" DataValueField="FaCon" Width="560px" class="input--style-4" runat="server" required></asp:TextBox>
 
-                                        
-                                    </div>
                                 </div>
                             </div>
-                            <hr style="width:560px;text-align:left;margin-left:0;color:palegreen;">
-                          <br />
-                            <div class="row row-space">
-                                <div class="col-2">
-                                    <div class="input-group">
-                                       <asp:Label ID="Label9" runat="server" Text="State "><b>JEE Roll Number  </b><span class="required"> *</span></asp:Label>
-                                        <asp:TextBox ID="Jeeroll" DataValueField="" class="input--style-4" runat="server" required   ></asp:TextBox>
-
-                                    </div>
-                                </div>
-                                 
-                                <div class="col-2">
-                                    <div class="input-group">
-                                         <asp:Label ID="Label10" runat="server" Text="State "><b>JEE Score  </b><span class="required"> *</span></asp:Label>
-                                        <asp:TextBox ID="Jeescore" DataValueField="" class="input--style-4" runat="server" required   ></asp:TextBox>
-
-                                        
-                                    </div>
+                            <div class="col-2">
+                                <div class="input-group">
                                 </div>
                             </div>
-                          <hr style="width:560px;text-align:left;margin-left:0;color:palegreen;">
-                          <br />
-                            <div class="row row-space">
-                                <div class="col-2">
-                                    <div class="input-group">
-                                        <asp:Label ID="Label12" runat="server" Text="State "><b>MH-CET Roll Number </b><span class="required"> *</span></asp:Label>
-                                        <asp:TextBox ID="Cetroll" DataValueField="" class="input--style-4" runat="server" required   ></asp:TextBox>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <asp:Label ID="Label3" runat="server" Text="State "><b>SSC Total Marks Obtained  </b><span class="required"> *</span></asp:Label>
+                                    <asp:TextBox ID="StotMarObt" DataValueField="FaOcup" class="input--style-4" runat="server" required></asp:TextBox>
 
-                                       </div>
-                                </div>
-                                <div class="col-2">
-                                    <div class="input-group">
-                                        
-                                        
-                                        <asp:Label ID="Label13" runat="server" Text="State "><b>MH-CET Score </b><span class="required"> *</span></asp:Label>
-                                        <asp:TextBox ID="Cetscore" DataValueField="" class="input--style-4" runat="server" required   ></asp:TextBox>
-                                    
 
-                                    </div>
                                 </div>
                             </div>
-                            <div class="row row-space">
-                                <div class="col-2">
-                                    <div class="input-group">
-                                       
-                                    </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <asp:Label ID="Label4" runat="server" Text="State "><b>SSC Percentage  </b><span class="required"> *</span><h7>(Dont use % symbol)</h7></asp:Label>
+                                    <asp:TextBox ID="Spercent" DataValueField="MoName" class="input--style-4" runat="server" required></asp:TextBox>
+
                                 </div>
-                            
-                           
+                            </div>
+                        </div>
+                        <hr style="width: 560px; text-align: left; margin-left: 0; color: palegreen;">
+                        <br />
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <asp:Label ID="Label5" runat="server" Text="State "><b>Diploma Board </b><span class="required"> *</span></asp:Label>
+                                    <asp:TextBox ID="Dboard" DataValueField="MoCon" Width="560px" class="input--style-4" runat="server" required></asp:TextBox>
+
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <asp:Label ID="Label17" runat="server" Text="State "><b>Diploma Total Marks Obtained </b><span class="required"> *</span>‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‎‎‎‎</asp:Label>
+                                    <asp:TextBox ID="DtotMarObt" DataValueField="MoName" class="input--style-4" runat="server" required></asp:TextBox>
+
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <asp:Label ID="Label8" runat="server" Text="State "><b>Diploma Percentage </b> <span class="required"> *</span> <h7>(Dont use % symbol)</h7></asp:Label>
+                                    <asp:TextBox ID="Dpercent" DataValueField="" class="input--style-4" runat="server" required></asp:TextBox>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <hr style="width: 560px; text-align: left; margin-left: 0; color: palegreen;">
+                        <br />
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <asp:Label ID="Label9" runat="server" Text="State "><b>JEE Roll Number  </b><span class="required"> *</span></asp:Label>
+                                    <asp:TextBox ID="Jeeroll" DataValueField="" class="input--style-4" runat="server" required></asp:TextBox>
+                              
+                                </div>
+                            </div>
+
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <asp:Label ID="Label10" runat="server" Text="State "><b>JEE Score  </b><span class="required"> *</span></asp:Label>
+                                    <asp:TextBox ID="Jeescore" DataValueField="" class="input--style-4" runat="server" required></asp:TextBox>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <hr style="width: 560px; text-align: left; margin-left: 0; color: palegreen;">
+                        <br />
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <asp:Label ID="Label12" runat="server" Text="State "><b>MH-CET Roll Number </b><span class="required"> *</span></asp:Label>
+                                    <asp:TextBox ID="Cetroll" DataValueField="" class="input--style-4" runat="server" required></asp:TextBox>
+
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+
+
+                                    <asp:Label ID="Label13" runat="server" Text="State "><b>MH-CET Score </b><span class="required"> *</span></asp:Label>
+                                    <asp:TextBox ID="Cetscore" DataValueField="" class="input--style-4" runat="server" required></asp:TextBox>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                </div>
+                            </div>
+
+
                             <center>
                                          <asp:Button ID="Button1" runat="server"  class="btn btn--radius-2 btn--blue" onclick="Save_Past_Edu"  Text="Submit" >   </asp:Button>
                                    </center>
@@ -434,12 +432,11 @@
                                     $("#MyPopup").modal("show");
                                 }
                             </script>
-
-                        </form>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <!-- Modal Popup -->
     <link href="mycss/mycss.css" rel="stylesheet" />
@@ -469,21 +466,21 @@
     <!-- Custom js -->
     <script src="assets/js/custom.js"></script>
     <!-- Start footer -->
-   <div class="fixed-footer">
-    <footer id="mu-footer">
-        <!-- start footer top -->
-        
-        <!-- start footer bottom -->
+    <div class="fixed-footer">
+        <footer id="mu-footer">
+            <!-- start footer top -->
 
-        <div class="mu-footer-bottom">
-            <div class="container">
-                <div class="mu-footer-bottom-area">
-                    <p>&copy; All Right Reserved. Designed by CE Department</p>
+            <!-- start footer bottom -->
+
+            <div class="mu-footer-bottom">
+                <div class="container">
+                    <div class="mu-footer-bottom-area">
+                        <p>&copy; All Right Reserved. Designed by CE Department</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- end footer bottom -->
-    </footer>
-         </div>
+            <!-- end footer bottom -->
+        </footer>
+    </div>
 </body>
 </html>

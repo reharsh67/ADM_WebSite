@@ -50,7 +50,7 @@ namespace ADM_WebSite.Student
             if (RadioButton5.Checked)
                 ef.Mode = RadioButton5.Text;
             ef.AppId = Int32.Parse(AppId.Text);
-            ef.Date = txtSelectDate.Text;
+            ef.Date = dob.Text;
             ef.Slot = slot;
             try
             {

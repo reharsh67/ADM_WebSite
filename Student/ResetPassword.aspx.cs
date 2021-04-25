@@ -12,11 +12,14 @@ namespace ADM_WebSite.Student
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["appid"] == null)
-                Response.Redirect("error.aspx");
+                Response.Redirect("/Student/Error.aspx");
             else
             {
-               
-               appid.Text = (Session["appid"]).ToString();
+                Response.ClearHeaders();
+                Response.AddHeader("Cache-Control", "no-cache, no-store, max-age=0, must-revalidate");
+                Response.AddHeader("Pragma", "no-cache");
+                appid.ReadOnly = true;
+                appid.Text = (Session["appid"]).ToString();
             }
         }
         protected void Reset_Pass(object seder ,EventArgs e)

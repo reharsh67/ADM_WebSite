@@ -67,6 +67,7 @@
     <Content Include="Student\StudentARF.aspx" />
     <Content Include="Student\StudentARFPastEdu.aspx" />
     <Content Include="Student\StudLogin.aspx" />
+    <Content Include="Student\UploadDocuments.aspx" />
     <Content Include="Student\ViewQueryResp.aspx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -183,6 +184,13 @@
     </Compile>
     <Compile Include="Student\StudLogin.aspx.designer.cs">
       <DependentUpon>StudLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\UploadDocuments.aspx.cs">
+      <DependentUpon>UploadDocuments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\UploadDocuments.aspx.designer.cs">
+      <DependentUpon>UploadDocuments.aspx</DependentUpon>
     </Compile>
     <Compile Include="Student\ViewQueryResp.aspx.cs">
       <DependentUpon>ViewQueryResp.aspx</DependentUpon>

@@ -10,80 +10,85 @@
 </a>
 <!-- END SCROLL TOP BUTTON -->
 
-  <div class="fixed-header">
-<header id="mu-header">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 col-md-12">
-                <div class="mu-header-area">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                            <div class="mu-header-top-left">
-                                <div class="mu-top-email">
-                                    <i class="fa fa-envelope"></i>
-                                    <span>info@stvincentngp.edu.in</span>
-                                </div>
-                                <div class="mu-top-phone">
-                                    <i class="fa fa-phone"></i>
-                                    <span>+91 7743979315  </span>
+<div class="fixed-header">
+    <header id="mu-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="mu-header-area">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <div class="mu-header-top-left">
+                                    <div class="mu-top-email">
+                                        <i class="fa fa-envelope"></i>
+                                        <span>info@stvincentngp.edu.in</span>
+                                    </div>
+                                    <div class="mu-top-phone">
+                                        <i class="fa fa-phone"></i>
+                                        <span>+91 7743979315  </span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                            <div class="mu-header-top-right">
-                                <nav>
-                                    <ul class="mu-top-social-nav">
-                                        <li><a href="https://www.facebook.com/stvincentngp/"><span class="fa fa-facebook"></span></a></li>
-                                        <li><a href="https://twitter.com/techpallottines"><span class="fa fa-twitter"></span></a></li>
-                                        <li><a href="https://www.youtube.com/channel/UCwI-u4lNseB2N9t2H5otnVA"><span class="fa fa-youtube"></span></a></li>
-                                    </ul>
-                                </nav>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <div class="mu-header-top-right">
+                                    <nav>
+                                        <ul class="mu-top-social-nav">
+                                            <li><a href="https://www.facebook.com/stvincentngp/"><span class="fa fa-facebook"></span></a></li>
+                                            <li><a href="https://twitter.com/techpallottines"><span class="fa fa-twitter"></span></a></li>
+                                            <li><a href="https://www.youtube.com/channel/UCwI-u4lNseB2N9t2H5otnVA"><span class="fa fa-youtube"></span></a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</header>
-<!-- End header  -->
-<!-- Start menu -->
-<section id="mu-menu">
-    <nav class="navbar navbar-default" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <!-- LOGO -->
-                <!-- TEXT BASED LOGO -->
-               
-                <!-- IMG BASED LOGO  -->
-                <span></span>
-                <a class="profile-pic1" href="#">
-                    <img src="content/logo.png" alt="logo" width="350" height="70"></a>
+    </header>
+    <!-- End header  -->
+    <!-- Start menu -->
+    <section id="mu-menu">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- LOGO -->
+                    <!-- TEXT BASED LOGO -->
+
+                    <!-- IMG BASED LOGO  -->
+                    <span></span>
+                    <a class="profile-pic1" href="#">
+                        <img src="content/logo.png" alt="logo" width="350" height="70"></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
+
+
+
+                        <li class="right-div"></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Login <span class="fa fa-angle-down"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/Student/StudLogin.aspx">Student</a></li>
+                                <li><a href="#">Clerk</a></li>
+                                <li><a href="#">Admin</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
             </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
-                    
-
-                    
-                   <li class="right-div">
-   
-            </li>
-
-
-                </ul>
-            </div>
-            <!--/.nav-collapse -->
-        </div>
-    </nav>
-</section>
-        </div>
+        </nav>
+    </section>
+</div>
 
 <head>
     <!-- Favicon -->
@@ -145,8 +150,8 @@
                     <form method="POST" runat="server">
 
 
-                        
-                        
+
+
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
@@ -176,53 +181,53 @@
                         <center>
                                          <asp:Button ID="Button1" runat="server"  class="btn btn--radius-2 btn--blue"  onclick="btn_login" Text="Login" >   </asp:Button>
                                    </center>
-                        <br /> 
                         <br />
-                       <label>First time visitiors first create a password <a href="/Student/GenratePassword.aspx"><span class="required">Click here </span></a>.</label>
+                        <br />
+                        <label>First time visitiors first create a password <a href="/Student/GenratePassword.aspx"><span class="required">Click here </span></a>.</label>
                         <br />
                         <br />
                         <label>Forgot Password <a href="/Student/ForgotPassword.aspx"><span class="required">Click here </span></a>.</label>
                         <br />
                         <br />
-                        </form>
-                        <script type="text/javascript" src='https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.3.min.js'></script>
-                        <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js'></script>
-                        <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css' media="screen" />
+                    </form>
+                    <script type="text/javascript" src='https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.3.min.js'></script>
+                    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js'></script>
+                    <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css' media="screen" />
 
-                        <div id="MyPopup" class="modal fade" role="dialog">
-                            <div class="modal-dialog">
-                                <!-- Modal content-->
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal">
-                                            &times;</button>
-                                        <h4 class="modal-title"></h4>
-                                    </div>
-                                    <div class="modal-body">
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-danger" onclick="window.location.href='/Student/StudLogin.aspx'" data-dismiss="modal">
-                                            OK</button>
-                                    </div>
+                    <div id="MyPopup" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        &times;</button>
+                                    <h4 class="modal-title"></h4>
+                                </div>
+                                <div class="modal-body">
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" onclick="window.location.href='/Student/StudLogin.aspx'" data-dismiss="modal">
+                                        OK</button>
                                 </div>
                             </div>
-
                         </div>
-                        <script type="text/javascript">
-                            function ShowPopup(myMsg, myTitle) {
-                                $("#MyPopup .modal-title").html(myTitle);
-                                $("#MyPopup .modal-body").html(myMsg);
-                                $("#MyPopup").modal("show");
-                            }
-                        </script>
+
+                    </div>
+                    <script type="text/javascript">
+                        function ShowPopup(myMsg, myTitle) {
+                            $("#MyPopup .modal-title").html(myTitle);
+                            $("#MyPopup .modal-body").html(myMsg);
+                            $("#MyPopup").modal("show");
+                        }
+                    </script>
                 </div>
             </div>
         </div>
-        </div>
+    </div>
 
 
 
-   
+
     <script src="assets/js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="assets/js/bootstrap.js"></script>
@@ -241,25 +246,25 @@
     <script src="assets/js/custom.js"></script>
     <!-- Start footer -->
 
-    
 
-      <div class="fixed-footer">
-    <footer id="mu-footer">
-        <!-- start footer top -->
-        
-        <!-- start footer bottom -->
 
-        <div class="mu-footer-bottom">
-            <div class="container">
-                <div class="mu-footer-bottom-area">
-                    <p>&copy; All Right Reserved. Designed by CE Department</a></p>
+    <div class="fixed-footer">
+        <footer id="mu-footer">
+            <!-- start footer top -->
+
+            <!-- start footer bottom -->
+
+            <div class="mu-footer-bottom">
+                <div class="container">
+                    <div class="mu-footer-bottom-area">
+                        <p>&copy; All Right Reserved. Designed by CE Department</a></p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- end footer bottom -->
-    </footer>
-         </div>
-        <!-- end footer bottom -->
+            <!-- end footer bottom -->
+        </footer>
+    </div>
+    <!-- end footer bottom -->
     </footer>
 </body>
 </html>

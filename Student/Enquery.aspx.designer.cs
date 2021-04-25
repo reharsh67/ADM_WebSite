@@ -121,22 +121,22 @@ namespace ADM_WebSite.Student {
         protected global::System.Web.UI.WebControls.Label state;
         
         /// <summary>
-        /// statebox control.
+        /// stateboxList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox statebox;
+        protected global::System.Web.UI.WebControls.DropDownList stateboxList;
         
         /// <summary>
-        /// city control.
+        /// cityList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox city;
+        protected global::System.Web.UI.WebControls.DropDownList cityList;
         
         /// <summary>
         /// DropDownList2 control.

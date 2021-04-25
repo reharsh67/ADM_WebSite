@@ -103,15 +103,6 @@ namespace ADM_WebSite.Student {
         protected global::System.Web.UI.WebControls.TextBox city;
         
         /// <summary>
-        /// stream control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox stream;
-        
-        /// <summary>
         /// dob control.
         /// </summary>
         /// <remarks>
@@ -148,13 +139,13 @@ namespace ADM_WebSite.Student {
         protected global::System.Web.UI.WebControls.RadioButton RadioButton1;
         
         /// <summary>
-        /// Label1 control.
+        /// Label18 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label Label18;
         
         /// <summary>
         /// FaName control.
@@ -182,6 +173,24 @@ namespace ADM_WebSite.Student {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox FaCon;
+        
+        /// <summary>
+        /// RequiredFieldValidator3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
+        
+        /// <summary>
+        /// RegularExpressionValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
         
         /// <summary>
         /// Label3 control.
@@ -238,6 +247,24 @@ namespace ADM_WebSite.Student {
         protected global::System.Web.UI.WebControls.TextBox MoCon;
         
         /// <summary>
+        /// RequiredFieldValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        
+        /// <summary>
+        /// RegularExpressionValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator2;
+        
+        /// <summary>
         /// Label17 control.
         /// </summary>
         /// <remarks>
@@ -274,6 +301,24 @@ namespace ADM_WebSite.Student {
         protected global::System.Web.UI.WebControls.TextBox income;
         
         /// <summary>
+        /// Label1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
+        
+        /// <summary>
+        /// category control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList category;
+        
+        /// <summary>
         /// Label9 control.
         /// </summary>
         /// <remarks>
@@ -301,13 +346,13 @@ namespace ADM_WebSite.Student {
         protected global::System.Web.UI.WebControls.Label Label10;
         
         /// <summary>
-        /// religion control.
+        /// religionList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox religion;
+        protected global::System.Web.UI.WebControls.DropDownList religionList;
         
         /// <summary>
         /// Label12 control.
@@ -373,13 +418,13 @@ namespace ADM_WebSite.Student {
         protected global::System.Web.UI.WebControls.Label Label14;
         
         /// <summary>
-        /// admissiontype control.
+        /// admissionTypeList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox admissiontype;
+        protected global::System.Web.UI.WebControls.DropDownList admissionTypeList;
         
         /// <summary>
         /// Label16 control.
@@ -391,31 +436,13 @@ namespace ADM_WebSite.Student {
         protected global::System.Web.UI.WebControls.Label Label16;
         
         /// <summary>
-        /// admissionyr control.
+        /// admissionyrList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox admissionyr;
-        
-        /// <summary>
-        /// Label15 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label15;
-        
-        /// <summary>
-        /// academicyr control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox academicyr;
+        protected global::System.Web.UI.WebControls.DropDownList admissionyrList;
         
         /// <summary>
         /// Button1 control.

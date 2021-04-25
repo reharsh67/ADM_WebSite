@@ -13,18 +13,22 @@ namespace ADM_WebSite.Student
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           if (Session["appid"] == null)
+            if (Session["appid"] == null)
                 Response.Redirect("/Student/Error.aspx");
             else
             {
+                Response.ClearHeaders();
+                Response.AddHeader("Cache-Control", "no-cache, no-store, max-age=0, must-revalidate");
+                Response.AddHeader("Pragma", "no-cache");
+                AppidTxt.ReadOnly = true;
                 int appid = Int32.Parse(Session["appid"].ToString());
-                
+
                 ARFFormFields eff = new ARFFormFields();
                 eff.AppID = appid;
                 Service my = new Service();
                 try
                 {
-                    DataTable dt =  my.Pre_Fill_ARF(eff);
+                    DataTable dt = my.Pre_Fill_ARF(eff);
                     AppidTxt.Text = appid.ToString();
                     fName.Text = (string)dt.Rows[0]["r_firstname"];
                     mName.Text = (string)dt.Rows[0]["r_middlename"];
@@ -33,7 +37,8 @@ namespace ADM_WebSite.Student
                     EMAIL.Text = (string)dt.Rows[0]["r_email"];
                     statebox.Text = (string)dt.Rows[0]["r_state"];
                     city.Text = (string)dt.Rows[0]["r_city"];
-                   // stream.Text = (string)dt.Rows[0]["r_stream"];
+                    // stream.Text = (string)dt.Rows[0]["r_stream"];
+
                 }
                 catch (Exception ex)
                 {
@@ -62,14 +67,15 @@ namespace ADM_WebSite.Student
                 ob.MoPhno = MoCon.Text;
                 ob.MoWork = MoOcup.Text;
                 ob.Income = income.Text;
+                ob.Category = category.SelectedItem.ToString();
                 ob.Cast = cast.Text;
-                ob.Religion = religion.Text;
+                ob.Religion = religionList.SelectedItem.ToString();
                 ob.AddLine1 = addbox1.Text;
                 ob.AddLine2 = addbox2.Text;
                 ob.AddLine3 = addbox3.Text;
-                ob.AdmissionType = admissiontype.Text;
-                ob.AcademicYear = academicyr.Text;
-                ob.AdmissionIn = admissionyr.Text;
+                ob.AdmissionType = admissionTypeList.SelectedItem.ToString();
+                ob.AcademicYear = "2021-2020";
+                ob.AdmissionIn = admissionyrList.SelectedItem.ToString();
 
                 
                 string x = my.ARF_Fill(ob);
@@ -91,6 +97,6 @@ namespace ADM_WebSite.Student
         }
 
         }
+    
 
-      
-    }
+}

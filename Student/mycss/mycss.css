@@ -1,4 +1,7 @@
-﻿
+﻿.txt-border{
+  border-style: solid;
+  border-width: thin;
+}
 .profile-pic1 {
                         display: block;
                         margin: 0 auto;

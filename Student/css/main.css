@@ -375,6 +375,8 @@ input {
   -o-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   transition: all 0.4s ease;
+   border-style: solid;
+  border-width: thin;
 }
 
 .input--style-4::-webkit-input-placeholder {
@@ -386,22 +388,30 @@ input {
   /* Mozilla Firefox 4 to 18 */
   color: #666;
   opacity: 1;
+  border-style: solid;
+  border-width: thin;
 }
 
 .input--style-4::-moz-placeholder {
   /* Mozilla Firefox 19+ */
   color: #666;
   opacity: 1;
+  border-style: solid;
+  border-width: thin;
 }
 
 .input--style-4:-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: #666;
+  border-style: solid;
+  border-width: thin;
 }
 
 .input--style-4:-ms-input-placeholder {
   /* Microsoft Edge */
   color: #666;
+  border-style: solid;
+  border-width: thin;
 }
 
 .label {

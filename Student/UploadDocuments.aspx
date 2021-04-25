@@ -1,15 +1,12 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ResetPassword.aspx.cs" Inherits="ADM_WebSite.Student.ResetPassword" %>
-
-<!DOCTYPE html>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UploadDocuments.aspx.cs" Inherits="ADM_WebSite.Student.UploadDocuments" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <!--START SCROLL TOP BUTTON -->
 <a class="scrollToTop" href="#">
-    <id class="fa fa-angle-up"></id>
+    <i class="fa fa-angle-up"></i>
 </a>
 <!-- END SCROLL TOP BUTTON -->
-
 
 <div class="fixed-header">
     <!-- Start header  -->
@@ -98,51 +95,51 @@
         </nav>
     </section>
 </div>
-<br />
-<br />
-<title></title>
-<!-- Favicon -->
-<link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
 
-<!-- Font awesome -->
-<link href="assets/css/font-awesome.css" rel="stylesheet">
-<!-- Bootstrap -->
-<link href="assets/css/bootstrap.css" rel="stylesheet">
-<!-- Slick slider -->
-<link rel="stylesheet" type="text/css" href="assets/css/slick.css">
-<!-- Fancybox slider -->
-<link rel="stylesheet" href="assets/css/jquery.fancybox.css" type="text/css" media="screen" />
-<!-- Theme color -->
-<link id="switcher" href="assets/css/theme-color/default-theme.css" rel="stylesheet">
+<head>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
 
-<!-- Main style sheet -->
-<link href="assets/css/style.css" rel="stylesheet" />
-<!-- Required meta tags-->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Colorlib Templates">
-<meta name="author" content="Colorlib">
-<meta name="keywords" content="Colorlib Templates">
+    <!-- Font awesome -->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- Slick slider -->
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css" />
+    <!-- Fancybox slider -->
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.css" type="text/css" media="screen" />
+    <!-- Theme color -->
+    <link id="switcher" href="assets/css/theme-color/default-theme.css" rel="stylesheet" />
 
-<!-- Title Page-->
-<link href="mycss/mycss.css" rel="stylesheet" />
+    <!-- Main style sheet -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
 
-<!-- Icons font CSS-->
-<link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
-<link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
-<!-- Font special for pages-->
-<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <!-- Title Page-->
 
-<!-- Vendor CSS-->
-<link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
-<link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
-<!-- Main CSS-->
-<link href="css/main.css" rel="stylesheet" media="all">
-<script src="vendor/jquery/jquery.min.js"></script>
-<!-- Vendor JS-->
-<script src="vendor/select2/select2.min.js"></script>
-<script src="vendor/datepicker/moment.min.js"></script>
-<script src="vendor/datepicker/daterangepicker.js"></script>
+    <link href="mycss/mycss.css" rel="stylesheet" />
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+    <!-- Main CSS-->
+    <link href="css/main.css" rel="stylesheet" media="all">
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/datepicker/moment.min.js"></script>
+    <script src="vendor/datepicker/daterangepicker.js"></script>
+</head>
 
 
 <body>
@@ -150,17 +147,18 @@
     <br />
     <br />
 
+
     <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
         <div class="wrapper wrapper--w680">
             <div class="card card-4">
                 <div class="card-body">
-                    <h2 class="title">Reset Password</h2>
+                    <h2 class="title">Upload Documents</h2>
                     <form method="POST" runat="server">
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
-                                    <label>Appid-Id</label>
-                                    <asp:TextBox ID="appid" class="input--style-4" Width="560px" DataValueField="question" required runat="server"></asp:TextBox>
+                                    <label>Application-ID </label>
+                                    <asp:TextBox ID="Appid" Width="560px" class="input--style-4" DataValueField="question" required runat="server"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-2">
@@ -171,8 +169,8 @@
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
-                                    <label>Enter Current Password</label>
-                                    <asp:TextBox ID="CurrPass" class="input--style-4" TextMode="password" Width="560px" DataValueField="question" required runat="server"></asp:TextBox>
+                                    <label>Document Name</label>
+                                    <asp:DropDownList ID="DocName" class="input--style-4" Height="50" Width="560px" required runat="server"></asp:DropDownList>
                                 </div>
                             </div>
                             <div class="col-2">
@@ -183,77 +181,63 @@
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
-                                    <label>Enter New Password</label>
-                                    <asp:TextBox ID="NewPass" class="input--style-4" Width="560px" TextMode="password" DataValueField="password" required runat="server"></asp:TextBox>
-                                   
-    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Password must contain special characters and lowe case and uppcase letters"  
-        ValidationExpression="^.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!*@#$%^&+=]).*$"  
-        ControlToValidate="NewPass"></asp:RegularExpressionValidator> 
-                                </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="input-group">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row row-space">
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <label>Re-Enter New Password</label>
-                                    <asp:TextBox ID="Newpass1" class="input--style-4" Width="560px" TextMode="password" DataValueField="password" required runat="server"></asp:TextBox>
-                                    <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="NewPass" ForeColor="Red" ControlToValidate="Newpass1" ErrorMessage="Passwords must be same">
-                                    </asp:CompareValidator>
-                                </div>
-                            </div>
+                                    <label>Select File</label>
 
+                                    <asp:FileUpload ID="FileUpload1" Width="560px" required runat="server"></asp:FileUpload>
+                                    <%--<asp:RegularExpressionValidator   id="FileUpLoadValidator" runat="server"   ErrorMessage="Upload Jpegs and Gifs only."   ValidationExpression="^(([a-zA-Z]:)|(\\{2}\w+)\$?)(\\(\w[\w].*))(.jpg|.JPG|.gif|.GIF)$"   ControlToValidate="FileUpload1">  
+</asp:RegularExpressionValidator> --%>
+                                </div>
+                            </div>
                             <div class="col-2">
                                 <div class="input-group">
                                 </div>
                             </div>
                         </div>
+
 
                         <center>
-                                         <asp:Button ID="Button1" runat="server"  class="btn btn--radius-2 btn--blue" OnClick=" Reset_Pass"   Text="Reset" >   </asp:Button>
+                                         <asp:Button ID="Button1" runat="server" onclick="Button1_Click" class="btn btn--radius-2 btn--blue"   Text="Upload" >   </asp:Button>
                                    </center>
 
-                        <script type="text/javascript" src='https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.3.min.js'></script>
-                        <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js'></script>
-                        <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css'
-                            media="screen" />
-                        <!-- Bootstrap -->
-                        <!-- Modal Popup -->
-                        <div id="MyPopup" class="modal fade" role="dialog">
-                            <div class="modal-dialog">
-                                <!-- Modal content-->
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal">
-                                            &times;</button>
-                                        <h4 class="modal-title"></h4>
-                                    </div>
-                                    <div class="modal-body">
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-danger" onclick="window.location.href='/Student/StudDash.aspx'" data-dismiss="modal">
-                                            OK</button>
-                                        <script>function ShowPopup(myMsg, myTitle) {
-    $("#MyPopup .modal-title").html(myTitle);
-    $("#MyPopup .modal-body").html(myMsg);
-    $("#MyPopup").modal("show");
-}</script>
-                                    </div>
+                    </form>
+                    <script type="text/javascript" src='https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.3.min.js'></script>
+                    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js'></script>
+                    <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css' media="screen" />
+
+                    <div id="MyPopup" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        &times;</button>
+                                    <h4 class="modal-title"></h4>
+                                </div>
+                                <div class="modal-body">
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" onclick="window.location.href='/Student/StudLogin.aspx'" data-dismiss="modal">
+                                        OK</button>
                                 </div>
                             </div>
                         </div>
-                    </form>
+
+                    </div>
+                    <script type="text/javascript">
+                        function ShowPopup(myMsg, myTitle) {
+                            $("#MyPopup .modal-title").html(myTitle);
+                            $("#MyPopup .modal-body").html(myMsg);
+                            $("#MyPopup").modal("show");
+                        }
+                    </script>
                 </div>
             </div>
         </div>
     </div>
 
 
-    <br />
-    <br />
+
+
     <script src="assets/js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="assets/js/bootstrap.js"></script>
@@ -266,10 +250,14 @@
     <script type="text/javascript" src="assets/js/jquery.mixitup.js"></script>
     <!-- Add fancyBox -->
     <script type="text/javascript" src="assets/js/jquery.fancybox.pack.js"></script>
-
+    <link href="mycss/mycss.css" rel="stylesheet" />
+    <script src="myjs/myjs2.js"></script>
     <!-- Custom js -->
     <script src="assets/js/custom.js"></script>
     <!-- Start footer -->
+
+
+
     <div class="fixed-footer">
         <footer id="mu-footer">
             <!-- start footer top -->
@@ -279,12 +267,14 @@
             <div class="mu-footer-bottom">
                 <div class="container">
                     <div class="mu-footer-bottom-area">
-                        <p>&copy; All Right Reserved. Designed by CE Department</p>
+                        <p>&copy; All Right Reserved. Designed by CE Department</a></p>
                     </div>
                 </div>
             </div>
             <!-- end footer bottom -->
         </footer>
     </div>
+    <!-- end footer bottom -->
+    </footer>
 </body>
 </html>

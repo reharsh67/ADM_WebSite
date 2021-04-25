@@ -58,22 +58,13 @@ namespace ADM_WebSite.Student {
         protected global::System.Web.UI.WebControls.RadioButton RadioButton3;
         
         /// <summary>
-        /// txtSelectDate control.
+        /// dob control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSelectDate;
-        
-        /// <summary>
-        /// RequiredFieldValidator3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
+        protected global::System.Web.UI.WebControls.TextBox dob;
         
         /// <summary>
         /// CheckBoxList1 control.

@@ -170,7 +170,7 @@
                             <div class="col-2">
                                 <div class="input-group">
                                         <label>Write Your Query </label>
-                                        <asp:TextBox ID="askQue" Width="560px" class="input--style-4"  DataValueField="question" runat="server" ToolTip="Ask Query"></asp:TextBox>
+                                        <asp:TextBox ID="askQue" Width="560px" class="input--style-4" required DataValueField="question" runat="server" ToolTip="Ask Query"></asp:TextBox>
                                         <br />
 
                                       
