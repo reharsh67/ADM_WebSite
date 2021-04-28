@@ -77,10 +77,21 @@ namespace ADM_WebSite.Student
                 ob.AcademicYear = "2021-2020";
                 ob.AdmissionIn = admissionyrList.SelectedItem.ToString();
 
-                
+                string url="";
                 string x = my.ARF_Fill(ob);
+                if (admissionyrList.SelectedValue.ToString().Equals("0"))
+                {
+                    url = "/Student/StudentARFPastEdu.aspx";
+                   
+
+                }
+                else
+                {
+
+                    url = "/Student/StudentARFPastEduDip.aspx";
+                }
                 Response.Write(x);
-                string url = "/Student/StudentARFPastEdu.aspx";
+               x= x + admissionyrList.SelectedValue.ToString();
                 string script = "window.onload = function(){ alert('";
                 script += x;
                 script += "');";

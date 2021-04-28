@@ -502,8 +502,8 @@
                                     <asp:Label ID="Label16" runat="server" Text="State "><b>Addmission In   </b><span class="required"> *</span></asp:Label>
                                     <asp:DropDownList ID="admissionyrList" DataValueField="" class="input--style-4" runat="server" Width="260px" height="50" required  >
                                         <asp:ListItem Value=''>Please Select</asp:ListItem>
-                                        <asp:ListItem Value='FY'>First Year</asp:ListItem>
-                                        <asp:ListItem Value='DSY'>Direct Second Year</asp:ListItem>
+                                        <asp:ListItem Value='0'>First Year</asp:ListItem>
+                                        <asp:ListItem Value='1'>Direct Second Year</asp:ListItem>
                                     </asp:DropDownList>
 
 

@@ -225,7 +225,7 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <label>City <span class="required"><b>*</b></span></label>
-                                    <asp:DropDownList ID="cityList" AppendDataBoundItems="true" class="input--style-4" Width="270px" height="50" DataValueField="Cname" runat="server" onselectedindexchanged="Load_Cities" required ToolTip="Enter City name">
+                                    <asp:DropDownList ID="cityList" AppendDataBoundItems="true" class="input--style-4" Width="270px" height="50" DataValueField="Cname" runat="server" AutoPostBack ="true" required  >
                                           
                                     </asp:DropDownList>
 

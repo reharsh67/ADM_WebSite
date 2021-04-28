@@ -170,7 +170,7 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <label>Document Name</label>
-                                    <asp:DropDownList ID="DocName" class="input--style-4" Height="50" Width="560px" required runat="server"></asp:DropDownList>
+                                    <asp:DropDownList ID="DocName" AppendDataBoundItems="true" class="input--style-4" Height="50" Width="560px" required runat="server"></asp:DropDownList>
                                 </div>
                             </div>
                             <div class="col-2">
@@ -186,6 +186,8 @@
                                     <asp:FileUpload ID="FileUpload1" Width="560px" required runat="server"></asp:FileUpload>
                                     <%--<asp:RegularExpressionValidator   id="FileUpLoadValidator" runat="server"   ErrorMessage="Upload Jpegs and Gifs only."   ValidationExpression="^(([a-zA-Z]:)|(\\{2}\w+)\$?)(\\(\w[\w].*))(.jpg|.JPG|.gif|.GIF)$"   ControlToValidate="FileUpload1">  
 </asp:RegularExpressionValidator> --%>
+
+                                   
                                 </div>
                             </div>
                             <div class="col-2">

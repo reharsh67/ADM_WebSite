@@ -203,7 +203,7 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="PastEdu_Details">
+      <s:element name="CalculateMarks">
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="ef" type="tns:PastEduFields" />
@@ -212,6 +212,8 @@
       </s:element>
       <s:complexType name="PastEduFields">
         <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="SscOutOf" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Doutof" type="s:int" />
           <s:element minOccurs="1" maxOccurs="1" name="AppID" type="s:int" />
           <s:element minOccurs="0" maxOccurs="1" name="HsscBoard" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="HsscGrade" type="s:string" />
@@ -235,6 +237,20 @@
           <s:element minOccurs="0" maxOccurs="1" name="CetRoll" type="s:string" />
         </s:sequence>
       </s:complexType>
+      <s:element name="CalculateMarksResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CalculateMarksResult" type="tns:PastEduFields" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PastEdu_Details">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ef" type="tns:PastEduFields" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="PastEdu_DetailsResponse">
         <s:complexType>
           <s:sequence>
@@ -243,7 +259,11 @@
         </s:complexType>
       </s:element>
       <s:element name="Gen_Appid">
-        <s:complexType />
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ff" type="tns:EnqueryFields" />
+          </s:sequence>
+        </s:complexType>
       </s:element>
       <s:element name="Gen_AppidResponse">
         <s:complexType>
@@ -436,6 +456,12 @@
   <wsdl:message name="ARF_FillSoapOut">
     <wsdl:part name="parameters" element="tns:ARF_FillResponse" />
   </wsdl:message>
+  <wsdl:message name="CalculateMarksSoapIn">
+    <wsdl:part name="parameters" element="tns:CalculateMarks" />
+  </wsdl:message>
+  <wsdl:message name="CalculateMarksSoapOut">
+    <wsdl:part name="parameters" element="tns:CalculateMarksResponse" />
+  </wsdl:message>
   <wsdl:message name="PastEdu_DetailsSoapIn">
     <wsdl:part name="parameters" element="tns:PastEdu_Details" />
   </wsdl:message>
@@ -526,6 +552,10 @@
     <wsdl:operation name="ARF_Fill">
       <wsdl:input message="tns:ARF_FillSoapIn" />
       <wsdl:output message="tns:ARF_FillSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculateMarks">
+      <wsdl:input message="tns:CalculateMarksSoapIn" />
+      <wsdl:output message="tns:CalculateMarksSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="PastEdu_Details">
       <wsdl:input message="tns:PastEdu_DetailsSoapIn" />
@@ -640,6 +670,15 @@
     </wsdl:operation>
     <wsdl:operation name="ARF_Fill">
       <soap:operation soapAction="http://tempuri.org/ARF_Fill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculateMarks">
+      <soap:operation soapAction="http://tempuri.org/CalculateMarks" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -805,6 +844,15 @@
     </wsdl:operation>
     <wsdl:operation name="ARF_Fill">
       <soap12:operation soapAction="http://tempuri.org/ARF_Fill" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculateMarks">
+      <soap12:operation soapAction="http://tempuri.org/CalculateMarks" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

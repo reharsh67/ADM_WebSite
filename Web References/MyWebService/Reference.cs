@@ -48,6 +48,8 @@ namespace ADM_WebSite.MyWebService {
         
         private System.Threading.SendOrPostCallback ARF_FillOperationCompleted;
         
+        private System.Threading.SendOrPostCallback CalculateMarksOperationCompleted;
+        
         private System.Threading.SendOrPostCallback PastEdu_DetailsOperationCompleted;
         
         private System.Threading.SendOrPostCallback Gen_AppidOperationCompleted;
@@ -130,6 +132,9 @@ namespace ADM_WebSite.MyWebService {
         
         /// <remarks/>
         public event ARF_FillCompletedEventHandler ARF_FillCompleted;
+        
+        /// <remarks/>
+        public event CalculateMarksCompletedEventHandler CalculateMarksCompleted;
         
         /// <remarks/>
         public event PastEdu_DetailsCompletedEventHandler PastEdu_DetailsCompleted;
@@ -418,6 +423,35 @@ namespace ADM_WebSite.MyWebService {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/CalculateMarks", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public PastEduFields CalculateMarks(PastEduFields ef) {
+            object[] results = this.Invoke("CalculateMarks", new object[] {
+                        ef});
+            return ((PastEduFields)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void CalculateMarksAsync(PastEduFields ef) {
+            this.CalculateMarksAsync(ef, null);
+        }
+        
+        /// <remarks/>
+        public void CalculateMarksAsync(PastEduFields ef, object userState) {
+            if ((this.CalculateMarksOperationCompleted == null)) {
+                this.CalculateMarksOperationCompleted = new System.Threading.SendOrPostCallback(this.OnCalculateMarksOperationCompleted);
+            }
+            this.InvokeAsync("CalculateMarks", new object[] {
+                        ef}, this.CalculateMarksOperationCompleted, userState);
+        }
+        
+        private void OnCalculateMarksOperationCompleted(object arg) {
+            if ((this.CalculateMarksCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.CalculateMarksCompleted(this, new CalculateMarksCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/PastEdu_Details", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public string PastEdu_Details(PastEduFields ef) {
             object[] results = this.Invoke("PastEdu_Details", new object[] {
@@ -448,22 +482,24 @@ namespace ADM_WebSite.MyWebService {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/Gen_Appid", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public int Gen_Appid() {
-            object[] results = this.Invoke("Gen_Appid", new object[0]);
+        public int Gen_Appid(EnqueryFields ff) {
+            object[] results = this.Invoke("Gen_Appid", new object[] {
+                        ff});
             return ((int)(results[0]));
         }
         
         /// <remarks/>
-        public void Gen_AppidAsync() {
-            this.Gen_AppidAsync(null);
+        public void Gen_AppidAsync(EnqueryFields ff) {
+            this.Gen_AppidAsync(ff, null);
         }
         
         /// <remarks/>
-        public void Gen_AppidAsync(object userState) {
+        public void Gen_AppidAsync(EnqueryFields ff, object userState) {
             if ((this.Gen_AppidOperationCompleted == null)) {
                 this.Gen_AppidOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGen_AppidOperationCompleted);
             }
-            this.InvokeAsync("Gen_Appid", new object[0], this.Gen_AppidOperationCompleted, userState);
+            this.InvokeAsync("Gen_Appid", new object[] {
+                        ff}, this.Gen_AppidOperationCompleted, userState);
         }
         
         private void OnGen_AppidOperationCompleted(object arg) {
@@ -954,6 +990,10 @@ namespace ADM_WebSite.MyWebService {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class PastEduFields {
         
+        private int sscOutOfField;
+        
+        private int doutofField;
+        
         private int appIDField;
         
         private string hsscBoardField;
@@ -995,6 +1035,26 @@ namespace ADM_WebSite.MyWebService {
         private int cetScoreField;
         
         private string cetRollField;
+        
+        /// <remarks/>
+        public int SscOutOf {
+            get {
+                return this.sscOutOfField;
+            }
+            set {
+                this.sscOutOfField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int Doutof {
+            get {
+                return this.doutofField;
+            }
+            set {
+                this.doutofField = value;
+            }
+        }
         
         /// <remarks/>
         public int AppID {
@@ -1932,6 +1992,32 @@ namespace ADM_WebSite.MyWebService {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void CalculateMarksCompletedEventHandler(object sender, CalculateMarksCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class CalculateMarksCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal CalculateMarksCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public PastEduFields Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((PastEduFields)(this.results[0]));
             }
         }
     }

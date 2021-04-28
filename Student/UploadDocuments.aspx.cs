@@ -28,6 +28,7 @@ namespace ADM_WebSite.Student
                 Service my = new Service();
                 DataSet ds = new DataSet();
                 ds = my.Doc_List();
+                DocName.Items.Add("--Please Select State--");
                 DocName.DataTextField = ds.Tables[0].Columns["r_doctitle"].ToString(); // text field name of table dispalyed in dropdown       
                 DocName.DataValueField = ds.Tables[0].Columns["r_docid"].ToString();
                 // to retrive specific  textfield name   
@@ -41,9 +42,10 @@ namespace ADM_WebSite.Student
         {
             DocumentFields ef = new DocumentFields();
             Service my = new Service();
-            ef.AppID = 1;//Int32.Parse(sid);
-            ef.DocID = 1+DocName.SelectedIndex;
+            ef.AppID = Int32.Parse(sid);
+            ef.DocID = DocName.SelectedIndex;
             Response.Write(DocName.SelectedIndex);
+           
            // ef.Query = askQue.Text;
             try
             {
@@ -72,7 +74,7 @@ namespace ADM_WebSite.Student
                 script += "window.location = '";
                 script += url;
                 script += "'; }";
-                ClientScript.RegisterStartupScript(this.GetType(), "Redirect", script, true);
+               // ClientScript.RegisterStartupScript(this.GetType(), "Redirect", script, true);
 
             }
             catch (Exception ex)

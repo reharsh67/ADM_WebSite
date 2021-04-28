@@ -27,6 +27,7 @@ namespace ADM_WebSite.Student
         {
             EnqueryFields ef = new EnqueryFields();
             Service my = new Service();
+            Response.Write(cityList.SelectedItem.ToString());
             ef.City = cityList.SelectedItem.ToString();
             ef.FName = FName.Text;
             ef.MName = MName.Text;
@@ -40,16 +41,19 @@ namespace ADM_WebSite.Student
                 ef.Query = askQue.Text;
             try
             {
-                int x = my.Gen_Appid();
-                string res = my.Fill_Form(ef)+" Note This Application ID :  [ "+x+" ]";
+                
+                string res = my.Fill_Form(ef);
+                Response.Write(res);
+
+                string a = res;
                 string url = "/Student/Enquery.aspx";
                 string script = "window.onload = function(){ alert('";
-                script += res;
+                script += a;
                 script += "');";
                 script += "window.location = '";
                 script += url;
                 script += "'; }";
-                ClientScript.RegisterStartupScript(this.GetType(), "Redirect", script, true);
+              ClientScript.RegisterStartupScript(this.GetType(), "Redirect", script, true);
             }
             catch (Exception ex)
 

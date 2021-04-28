@@ -66,6 +66,7 @@
     <Content Include="Student\StudDash.aspx" />
     <Content Include="Student\StudentARF.aspx" />
     <Content Include="Student\StudentARFPastEdu.aspx" />
+    <Content Include="Student\StudentARFPastEduDip.aspx" />
     <Content Include="Student\StudLogin.aspx" />
     <Content Include="Student\UploadDocuments.aspx" />
     <Content Include="Student\ViewQueryResp.aspx" />
@@ -73,6 +74,9 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Content Include="Web References\MyWebService\PastEduFields.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
     <None Include="Web References\MyWebService\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -177,6 +181,13 @@
     </Compile>
     <Compile Include="Student\StudentARFPastEdu.aspx.designer.cs">
       <DependentUpon>StudentARFPastEdu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\StudentARFPastEduDip.aspx.cs">
+      <DependentUpon>StudentARFPastEduDip.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\StudentARFPastEduDip.aspx.designer.cs">
+      <DependentUpon>StudentARFPastEduDip.aspx</DependentUpon>
     </Compile>
     <Compile Include="Student\StudLogin.aspx.cs">
       <DependentUpon>StudLogin.aspx</DependentUpon>

@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="StudentARFPastEdu.aspx.cs" Inherits="ADM_WebSite.Student.StudentARFPastEdu" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="StudentARFPastEduDip.aspx.cs" Inherits="ADM_WebSite.Student.StudentARFPastEduDip" %>
+
 
 <!DOCTYPE html>
 <!DOCTYPE html>
@@ -7,6 +8,7 @@
 <a class="scrollToTop" href="#">
     <i class="fa fa-angle-up"></i>
 </a>
+  
 <!-- END SCROLL TOP BUTTON -->
 <div class="fixed-header">
     <!-- Start header  -->
@@ -167,120 +169,10 @@
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
-                                </div>
-                            </div>
-                        </div>
-                        <hr style="width: 560px; text-align: left; margin-left: 0; color: palegreen;">
-                        <br />
-
-                        <div class="row row-space">
-                            <div class="col-2">
-                                <div class="input-group">
-
-                                    <label>HSC Board<span class="required"><b>*</b></span></label>
-                                    <asp:TextBox ID="HBoard" class="input--style-4" runat="server" Width="560px" required></asp:TextBox>
-
-
-                                </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="input-group">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row row-space">
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <label>HSC Total Marks Obtained <span class="required"><b>*</b></span></label>
-                                    <asp:TextBox ID="HtotMarObt" class="input--style-4" runat="server"  required></asp:TextBox>
-
-
-                                </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="input-group">
-
-                                    <label>HSC Total Marks <span class="required"><b>*</b></span></label>
-                                    <asp:TextBox ID="HtotMar" class="input--style-4" runat="server" required></asp:TextBox>
-
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row row-space">
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <label>HSC Physics Marks  <span class="required"><b>*</b></span></label>
-                                    <asp:TextBox ID="HphyMar" class="input--style-4" runat="server"></asp:TextBox>
-
                                    
-
-                                </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <label>HSC Chemistry Marks<span class="required"><b>*</b></span></label>
-                                    <asp:TextBox ID="HchemMar" class="input--style-4" runat="server"></asp:TextBox>
-                                   
-
-                                </div>
                             </div>
                         </div>
-                        <div class="row row-space">
-                            <div class="col-2">
-                                <div class="input-group">
-
-                                    <asp:Label ID="state" runat="server" Text="State "><b>HSC Maths Marks  </b><span class="required"> *</span></asp:Label>
-                                    <asp:TextBox ID="HmatMar" class="input--style-4" runat="server" ></asp:TextBox>
-                                    
-
-                                </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <label>HSC PCM Total Marks <span class="required"><b>*</b></span></label>
-                                    <asp:TextBox ID="HpcmTot" class="input--style-4" runat="server" ReadOnly="true" ></asp:TextBox>
-
-
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="row row-space">
-                            <div class="col-2">
-                                <div class="input-group">
-
-                                    <asp:Label ID="Label6" runat="server" Text="State "><b>HSC PCM Percentage  </b><span class="required"> *</span><h7>(Dont use % symbol)</h7></asp:Label>
-                                    <asp:TextBox ID="HpcmPer" DataValueField="StreamName" class="input--style-4" runat="server" ReadOnly="true" required ToolTip=""></asp:TextBox>
-                                   
-
-                                </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <asp:Label ID="Label1" runat="server" Text="State "><b>HSC Overall Percentage  </b><span class="required"> *</span><h7>(Dont use % symbol)</h7></asp:Label>
-                                    <asp:TextBox ID="HoverallPer" class="input--style-4" runat="server" Height="50px" required ReadOnly="true" ></asp:TextBox>
-                                
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row row-space">
-                            <div class="col-2">
-                                <div class="input-group">
-
-                                    <label>HSC Grade<span class="required"><b>*</b></span></label>
-                                    <asp:TextBox ID="Hgrade" DataValueField="StreamName" class="input--style-4" runat="server" required ToolTip=""></asp:TextBox>
-
-
-                                </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="input-group">
-                                    
-                                </div>
-                            </div>
-                        </div>
+                  </div>
                         <hr style="width: 560px; text-align: left; margin-left: 0; color: palegreen;">
                         <br />
 
@@ -317,61 +209,60 @@
                                 </div>
                             </div>
                         </div>
-                       
                         <hr style="width: 560px; text-align: left; margin-left: 0; color: palegreen;">
                         <br />
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
-                                    <asp:Label ID="Label9" runat="server" Text="State "><b>JEE Roll Number  </b><span class="required"> *</span></asp:Label>
-                                    <asp:TextBox ID="Jeeroll" DataValueField="" class="input--style-4" runat="server" required></asp:TextBox>
-                              
+                                    <asp:Label ID="Label5" runat="server" Text="State "><b>Diploma Board </b><span class="required"> *</span></asp:Label>
+                                    <asp:TextBox ID="Dboard" DataValueField="MoCon"  class="input--style-4" runat="server" required></asp:TextBox>
+
                                 </div>
                             </div>
-
                             <div class="col-2">
                                 <div class="input-group">
-                                    <asp:Label ID="Label10" runat="server" Text="State "><b>JEE Score  </b><span class="required"> *</span></asp:Label>
-                                    <asp:TextBox ID="Jeescore" DataValueField="" class="input--style-4" runat="server" required></asp:TextBox>
+                                      <asp:Label ID="Label14" runat="server" Text="State "><b>Diploma Total Marks </b><span class="required"> *</span>‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‎‎‎‎</asp:Label>
+                                    <asp:TextBox ID="DoutOF" DataValueField="MoName" class="input--style-4" runat="server" required></asp:TextBox>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <asp:Label ID="Label17" runat="server" Text="State "><b>Diploma Total Marks Obtained </b><span class="required"> *</span>‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‎‎‎‎</asp:Label>
+                                    <asp:TextBox ID="DtotMarObt" DataValueField="MoName" class="input--style-4" runat="server"  required></asp:TextBox>
+
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <asp:Label ID="Label8" runat="server" Text="State "><b>Diploma Percentage </b> <span class="required"> *</span> <h7>(Dont use % symbol)</h7></asp:Label>
+                                    <asp:TextBox ID="Dpercent" DataValueField="" class="input--style-4" runat="server" ReadOnly="true" required></asp:TextBox>
 
 
                                 </div>
                             </div>
                         </div>
+                      
                         <hr style="width: 560px; text-align: left; margin-left: 0; color: palegreen;">
                         <br />
-                        <div class="row row-space">
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <asp:Label ID="Label12" runat="server" Text="State "><b>MH-CET Roll Number </b><span class="required"> *</span></asp:Label>
-                                    <asp:TextBox ID="Cetroll" DataValueField="" class="input--style-4" runat="server" required></asp:TextBox>
-
-                                </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="input-group">
-
-
-                                    <asp:Label ID="Label13" runat="server" Text="State "><b>MH-CET Score </b><span class="required"> *</span></asp:Label>
-                                    <asp:TextBox ID="Cetscore" DataValueField="" class="input--style-4" runat="server" required></asp:TextBox>
-
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row row-space">
+                        
+                       <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
                                     <center>
-                            <asp:Button ID="Button3" runat="server"  class="btn btn--radius-2 btn--blue" onclick="Calculate"  Text="Calculate" >   </asp:Button>
+                            <asp:Button ID="Button3" runat="server"  class="btn btn--radius-2 btn--blue"   Text="Calculate" >   </asp:Button>
                                   <br />
                                 </div>
                             </div> 
+                           <div class="col-2">
+                                <div class="input-group">
                             <center>
                           
-                                         <asp:Button ID="Button1" runat="server"  class="btn btn--radius-2 btn--blue" onclick="Save_Past_Edu"  Text="Submit" >   </asp:Button>
+                                         <asp:Button ID="Button1" runat="server"  class="btn btn--radius-2 btn--blue"   Text="Submit" >   </asp:Button>
                                    </center>
-                            
+                                    </div></div></div>
                     </form>
                 </div>
             </div>
@@ -424,3 +315,4 @@
     </div>
 </body>
 </html>
+
