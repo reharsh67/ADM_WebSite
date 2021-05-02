@@ -11,27 +11,38 @@ namespace ADM_WebSite.Clerk
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                Session.RemoveAll();
+            }
         }
         protected void btn_login(object sender, EventArgs e)
         {
             ClearkLoginFields ef = new ClearkLoginFields();
             Service my = new Service();
-            ef.ClerkID = Int32.Parse(Clerkid.Text);
+            ef.ClerkID = (Clerkid.Text);
             ef.Pass = pass.Text;
             try
             {
-                int res = my.Clerk_Login(ef);
+                string res = my.Clerk_Login(ef);
                 Response.Write(res);
-                if (res == 0)
+                if (res.Equals("Login sucess"))
                 {
-                    string myMsg = "login failed ! Invalid Email or Password", myTitle = "Server Says";
-                    ClientScript.RegisterStartupScript(this.GetType(), "Popup", "ShowPopup('" + myMsg + "', '" + myTitle + "');", true);
+                    Session["clerkid"] = Clerkid.Text;
+                    Response.Redirect("/Clerk/ClerkDash.aspx");
+
                 }
                 else
                 {
-                    Session["appid"] = Clerkid.Text;
-                    Response.Redirect("/Student/StudDash.aspx");
+
+                    string url = "/Student/StudLogin.aspx";
+                    string script = "window.onload = function(){ alert('";
+                    script += res;
+                    script += "');";
+                    script += "window.location = '";
+                    script += url;
+                    script += "'; }";
+                    ClientScript.RegisterStartupScript(this.GetType(), "Redirect", script, true);
                 }
             }
             catch (Exception ex)

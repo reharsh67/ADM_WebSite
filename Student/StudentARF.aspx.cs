@@ -83,11 +83,9 @@ namespace ADM_WebSite.Student
                 {
                     url = "/Student/StudentARFPastEdu.aspx";
                    
-
                 }
                 else
                 {
-
                     url = "/Student/StudentARFPastEduDip.aspx";
                 }
                 Response.Write(x);

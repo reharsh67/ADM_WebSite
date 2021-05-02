@@ -50,6 +50,8 @@ namespace ADM_WebSite.MyWebService {
         
         private System.Threading.SendOrPostCallback CalculateMarksOperationCompleted;
         
+        private System.Threading.SendOrPostCallback PastEdu_Details_DipOperationCompleted;
+        
         private System.Threading.SendOrPostCallback PastEdu_DetailsOperationCompleted;
         
         private System.Threading.SendOrPostCallback Gen_AppidOperationCompleted;
@@ -135,6 +137,9 @@ namespace ADM_WebSite.MyWebService {
         
         /// <remarks/>
         public event CalculateMarksCompletedEventHandler CalculateMarksCompleted;
+        
+        /// <remarks/>
+        public event PastEdu_Details_DipCompletedEventHandler PastEdu_Details_DipCompleted;
         
         /// <remarks/>
         public event PastEdu_DetailsCompletedEventHandler PastEdu_DetailsCompleted;
@@ -452,6 +457,35 @@ namespace ADM_WebSite.MyWebService {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/PastEdu_Details_Dip", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string PastEdu_Details_Dip(PastEduFields ef) {
+            object[] results = this.Invoke("PastEdu_Details_Dip", new object[] {
+                        ef});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void PastEdu_Details_DipAsync(PastEduFields ef) {
+            this.PastEdu_Details_DipAsync(ef, null);
+        }
+        
+        /// <remarks/>
+        public void PastEdu_Details_DipAsync(PastEduFields ef, object userState) {
+            if ((this.PastEdu_Details_DipOperationCompleted == null)) {
+                this.PastEdu_Details_DipOperationCompleted = new System.Threading.SendOrPostCallback(this.OnPastEdu_Details_DipOperationCompleted);
+            }
+            this.InvokeAsync("PastEdu_Details_Dip", new object[] {
+                        ef}, this.PastEdu_Details_DipOperationCompleted, userState);
+        }
+        
+        private void OnPastEdu_Details_DipOperationCompleted(object arg) {
+            if ((this.PastEdu_Details_DipCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.PastEdu_Details_DipCompleted(this, new PastEdu_Details_DipCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/PastEdu_Details", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public string PastEdu_Details(PastEduFields ef) {
             object[] results = this.Invoke("PastEdu_Details", new object[] {
@@ -652,10 +686,10 @@ namespace ADM_WebSite.MyWebService {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/Clerk_Login", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public int Clerk_Login(ClearkLoginFields ef) {
+        public string Clerk_Login(ClearkLoginFields ef) {
             object[] results = this.Invoke("Clerk_Login", new object[] {
                         ef});
-            return ((int)(results[0]));
+            return ((string)(results[0]));
         }
         
         /// <remarks/>
@@ -872,7 +906,7 @@ namespace ADM_WebSite.MyWebService {
         
         private string confirmPassField;
         
-        private int clerkIDField;
+        private string clerkIDField;
         
         /// <remarks/>
         public string Email {
@@ -915,7 +949,7 @@ namespace ADM_WebSite.MyWebService {
         }
         
         /// <remarks/>
-        public int ClerkID {
+        public string ClerkID {
             get {
                 return this.clerkIDField;
             }
@@ -2024,6 +2058,32 @@ namespace ADM_WebSite.MyWebService {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void PastEdu_Details_DipCompletedEventHandler(object sender, PastEdu_Details_DipCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class PastEdu_Details_DipCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal PastEdu_Details_DipCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void PastEdu_DetailsCompletedEventHandler(object sender, PastEdu_DetailsCompletedEventArgs e);
     
     /// <remarks/>
@@ -2222,10 +2282,10 @@ namespace ADM_WebSite.MyWebService {
         }
         
         /// <remarks/>
-        public int Result {
+        public string Result {
             get {
                 this.RaiseExceptionIfNecessary();
-                return ((int)(this.results[0]));
+                return ((string)(this.results[0]));
             }
         }
     }

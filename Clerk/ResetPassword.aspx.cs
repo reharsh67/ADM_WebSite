@@ -21,7 +21,7 @@ namespace ADM_WebSite.Clerk
             ef.Pass = NewPass.Text;
             ef.ConfirmPass = Newpass1.Text;
             ef.OldPass = CurrPass.Text;
-            ef.ClerkID = Int32.Parse(appid.Text);
+            ef.ClerkID = appid.Text;
             try
             {
 

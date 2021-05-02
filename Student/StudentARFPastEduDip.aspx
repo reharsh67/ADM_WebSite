@@ -252,7 +252,7 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <center>
-                            <asp:Button ID="Button3" runat="server"  class="btn btn--radius-2 btn--blue"   Text="Calculate" >   </asp:Button>
+                            <asp:Button ID="Button3" runat="server"  class="btn btn--radius-2 btn--blue" onClick="Calculate"  Text="Calculate" >   </asp:Button>
                                   <br />
                                 </div>
                             </div> 
@@ -260,7 +260,7 @@
                                 <div class="input-group">
                             <center>
                           
-                                         <asp:Button ID="Button1" runat="server"  class="btn btn--radius-2 btn--blue"   Text="Submit" >   </asp:Button>
+                                         <asp:Button ID="Button1" runat="server"  class="btn btn--radius-2 btn--blue" OnClick="Save_Past_Edu"  Text="Submit" >   </asp:Button>
                                    </center>
                                     </div></div></div>
                     </form>

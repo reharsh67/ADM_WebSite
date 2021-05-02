@@ -24,7 +24,7 @@ namespace ADM_WebSite.Student
 
             }
         }
-             protected void Save_Past_Edu(object sender, EventArgs e)
+        protected void Save_Past_Edu(object sender, EventArgs e)
         {
             int appid = Int32.Parse(Session["appid"].ToString());
             PastEduFields ob = new PastEduFields();
@@ -33,10 +33,14 @@ namespace ADM_WebSite.Student
             {
 
                 ob.AppID = Int32.Parse(Session["appid"].ToString());
+                ob.DipBoard = Dboard.Text;
                 ob.SscBoard = Sboard.Text;
                 ob.SscOverallPer = float.Parse(Spercent.Text);
+                ob.SscOutOf = int.Parse(SoutOF.Text);
+                ob.DipOverallPer = int.Parse(Dpercent.Text);
+                ob.DipTotObt = int.Parse(DtotMarObt.Text);
                 ob.SscTotObt = Int32.Parse(StotMarObt.Text);
-                string x = my.PastEdu_Details(ob);
+                string x = my.PastEdu_Details_Dip(ob);
                 Response.Write(x);
                 string url = "/Student/UploadDocuments.aspx";
                 string script = "window.onload = function(){ alert('";
@@ -61,8 +65,13 @@ namespace ADM_WebSite.Student
             Service my = new Service();
             ob.SscTotObt = Int32.Parse(StotMarObt.Text);
             ob.SscOutOf = int.Parse(SoutOF.Text);
+            ob.DipTotObt = int.Parse(DtotMarObt.Text);
+            ob.Doutof = int.Parse(DoutOF.Text);
             PastEduFields om = my.CalculateMarks(ob);
+            Response.Write(om.SscOverallPer.ToString());
+            Response.Write(om.DipOverallPer.ToString());
             (Spercent.Text) = om.SscOverallPer.ToString();
+            Dpercent.Text = om.DipOverallPer.ToString();
             Button1.Enabled = true;
         }
 
