@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ViewQueryResp.aspx.cs" Inherits="ADM_WebSite.Student.ViewQueryResp" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ListAssignedQuery.aspx.cs" Inherits="ADM_WebSite.Clerk.ListAssignedQuery" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -156,13 +156,15 @@
 
             <center>     
         <div class="rounded_corners" style="width: 1500px">
-            <asp:GridView ID="GridView2" runat="server" ShowHeaderWhenEmpty="true" HeaderStyle-BackColor="#3AC0F2" HeaderStyle-ForeColor="White" RowStyle-BackColor="#A1DCF2" AlternatingRowStyle-BackColor="White" RowStyle-ForeColor="#3A3A3A" AutoGenerateColumns="false" AllowPaging="false"  OnPageIndexChanging="OnPageIndexChanging">
+            <asp:GridView ID="GridView2" runat="server" EmptyDataText="No Records Found" ShowHeaderWhenEmpty="true"  HeaderStyle-BackColor="#3AC0F2" HeaderStyle-ForeColor="White" RowStyle-BackColor="#A1DCF2" AlternatingRowStyle-BackColor="White" RowStyle-ForeColor="#3A3A3A" AutoGenerateColumns="false" AllowPaging="false"  >
                 <Columns>
                     <asp:BoundField DataField="r_queryid" HeaderText="QueryID" HeaderStyle-width="5%" />
                     <asp:BoundField DataField="r_query" HeaderText="Query" HeaderStyle-width="40%" />
-                    <asp:BoundField DataField="r_response" HeaderText="Response" HeaderStyle-width="40%" />
-                    <asp:BoundField DataField="r_time_posted" HeaderText="Posted On" HeaderStyle-width="10%" />
-                    <asp:BoundField DataField="r_time_responded" HeaderText="Answered On" HeaderStyle-Width="10%" />
+                    <asp:TemplateField ShowHeader="False">
+            <ItemTemplate>
+                <asp:Button ID="Button1" runat="server" CausesValidation="false" CommandName="SendMail" Text="Respond" CommandArgument='<%# Eval("id") %>' />
+            </ItemTemplate>
+        </asp:TemplateField>
                 </Columns>
             </asp:GridView>
         </div>
@@ -209,4 +211,5 @@
 </body>
 
 </html>
+
 

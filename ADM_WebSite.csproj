@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Clerk\Error.aspx" />
+    <Content Include="Clerk\ListAssignedQuery.aspx" />
     <Content Include="Clerk\LoginClerk.aspx" />
     <Content Include="Clerk\ResetPassword.aspx" />
     <Content Include="Student\AskQueAgain.aspx" />
@@ -91,6 +92,13 @@
     </Compile>
     <Compile Include="Clerk\Error.aspx.designer.cs">
       <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Clerk\ListAssignedQuery.aspx.cs">
+      <DependentUpon>ListAssignedQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Clerk\ListAssignedQuery.aspx.designer.cs">
+      <DependentUpon>ListAssignedQuery.aspx</DependentUpon>
     </Compile>
     <Compile Include="Clerk\LoginClerk.aspx.cs">
       <DependentUpon>LoginClerk.aspx</DependentUpon>
